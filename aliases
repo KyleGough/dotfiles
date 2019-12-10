@@ -1,0 +1,106 @@
+autoload -U compinit
+compinit
+
+# Applications.
+alias runescape='/usr/bin/runescape-launcher &'
+alias clonehero='/usr/bin/clonehero/clonehero &'
+alias sortingVisualiser='wine /usr/bin/sortingVisualiser.exe &'
+alias spotify='spotify &'
+
+# Clipboard.
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Current Projects
+alias sudoku='cd ~/Documents/sudoku'
+alias cs413='cd ~/Documents/cs413'
+alias portfolio='cd ~/Documents/portfolio'
+alias cs910='cd ~/Documents/cs910/cw'
+
+# Directories.
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias /='cd /'
+alias ~='cd ~'
+alias mkdir='mkdir -pv'
+mkcd() { mkdir -p $1; cd $1 }
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias untar='tar -xvf'
+
+# Git.
+alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
+
+# Media Controller.
+alias song='playerctl metadata --format "Now playing: {{ artist }} - {{ album }} - {{ title }}"'
+alias next='playerctl next && sleep 1 && song'
+alias previous='playerctl previous && sleep 1 && song'
+alias pause='playerctl play-pause'
+
+# Network.
+alias ip='curl icanhazip.com'
+
+# Packages.
+alias pac='sudo pacman'
+alias apt-get='sudo apt-get'
+alias pip='sudo pip'
+alias docker='sudo docker'
+
+# Random.
+alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
+alias fire='aafire -driver curses'
+
+# Security.
+alias password='openssl rand -base64 20'
+alias sha='shasum -a 256'
+alias please='sudo'
+alias plz='sudo'
+
+# Servers.
+alias httpd='sudo code /etc/httpd/conf/httpd.conf'
+
+# SSH.
+alias ssh-joshua='ssh u1602448@joshua.dcs.warwick.ac.uk'
+
+# Shortcuts.
+alias commands='vim ~/Documents/config/commands'
+alias aliases='vim ~/Documents/config/aliases && source ~/.zshrc'
+alias startup='vim ~/Documents/config/startup.py'
+alias docs='cd ~/Documents'
+alias desk='cd ~/Desktop'
+alias pics='cd ~/Pictures'
+alias vids='cd ~/Videos'
+alias grub='sudo vim /etc/default/grub'
+alias usb='cd /run/media/kyle/'
+
+# Shutdown.
+alias shutdown='shutdown -h now'
+alias restart='shutdown -r now'
+
+# Terminal.
+unalias ll
+unalias ls
+unalias la
+alias ll='ls -Alh --color=auto'
+alias ls='ls --color=auto'
+alias la='ls -Alh --color=auto'
+alias grep='grep --color=auto'
+alias h='history'
+alias hs='history | grep'
+alias c='clear'
+alias neofetch='neofetch --source /home/kyle/Pictures/ascii/goose.txt'
+
+# Web.
+alias google='firefox google.co.uk &'
+alias youtube='firefox youtube.co.uk &'
+alias github='firefox github.com &'
+alias amazon='firefox amazom.co.uk &'
+alias netflix='firefox netflix.co.uk &'
+alias gslides='firefox https://docs.google.com/presentation/u/0/ &'
+alias gsheets='firefox https://docs.google.com/spreadsheets/u/0/ &'
+alias gdocs='firefox https://docs.google.com/document/u/0/ &'
+
+# DON'T FORGET TO RELOAD
+alias reload='clear && source ~/.zshrc'

@@ -1,0 +1,19 @@
+#Display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Prints the ASCII art for my name.
+cat ~/Pictures/ascii/name.txt
+
+# Compiles the aliases.
+source ~/Documents/config/aliases
+
+# Displays neofetch.
+neofetch --source ~/Pictures/ascii/goose.txt
+
+# Displays useful commands and todo list.
+python ~/Documents/config/startup.py
+
+# Displays the current directory.
+echo "    " $(pwd)
+echo ""
+

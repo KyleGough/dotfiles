@@ -1,0 +1,136 @@
+#[cat] - Prints the contents of a file.
+cat "<file>"     # Prints a file.
+cat -n "<file>"  # Prints a file with line numbers.
+
+#[cloc] - Line count.
+cloc .           # Counts lines in files.
+
+#[chsh] - Shell Management.
+chsh -l          # List installed shells.
+chsh -s <path>   # Set default shell.
+
+#[curl] - Tests application's endpoint.
+curl -I -s "<app>":"<port>"
+
+#[df] - Disk usage.
+df -ah                               # Get dsk usage of main directories.
+
+#[diff] - Finds differences between two files.
+diff "<file1>" "<file2>"
+
+#[docker] - Lightweight application container.
+docker info                          # View info.
+docker images                        # View list of all images.
+docker run "<container>"             # Loads and runs a command in a container.
+docker port "<container>"            # Views available ports.
+docker run -d -P -v --name "<name>" "<container>" # Runs a container in detached mode. Publishes ports.
+docker start "<container>"           # Starts a container.
+docker stop "<container>"            # Stops a container.
+
+#[du] - Disk usage for a file.
+du -sh                               # View disk space used by a file.
+
+#[feh] - Image tool.
+feh "<image file">                   # Views an image file.
+feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
+
+#[git] - Repositories.
+git config --global user.name "<name>"
+git config --global user.email "<email>"
+git remote add origin <url>
+git remote set-url origin git+ssh://git@github.com/"<user>"/"<repo>".git
+git status
+git diff
+git add "<file>"
+git commit -m "<commit message>"
+git push origin "<branch>"
+git pull origin "<branch>"
+git branch "<branch>"
+git checkout "<branch>"
+
+#[grep] - REGEX matching.
+egrep -v '^(;|#|//)'        # Shows a file, ignoring comments.
+
+#[import] - Screenshot.
+import "<filename>"         # Takes a screenshot of a defined region.
+import -screen "<filename>" # Takes a screenshot of the entire screen. 
+
+#[pamac] - Arch User Repository.
+pamac -a "<package name>"        # Searches for packages.
+pamac build "<package name>"     # Builds a package.
+
+#[ping] - Pings URL.
+ping -c 5         # Pings given URL 5 times.
+
+#[ps] - View processes.
+ps aux            # View all processes in BSD syntax..
+
+#[pwd] - Current directory.
+pwd               # Prints the current directory.
+
+#[python] - Python interpreter.
+python "<file.py>"                               # Excutes a Python file.
+cat "<file.json>" | python -m json.tool          # Beautifty JSON file.
+
+#[shutdown] - Shutdown and restart computer.
+shutdown -h now   # Shutdown computer immediately.
+shutdown -h 5     # Shutdown computer in 5 minutes.
+restart           # Reboots the computer immediately.
+
+#[ss] - Socket investigator.
+ss -tulpan        # View open TCP and UDP ports.
+
+#[uniq] - FIlters out duplicate lines.
+uniq "<file>"
+
+#-----------------------------------------------------------------------------------#
+
+#[Common] - Common commands.
+Directory:    mkdir, ls, cp, rm, cd, mv, rmdir, ln
+Files:        touch, less, head, tail
+Permissions:  chmod, chwon, chgrp
+Output:       grep, wc, sort, cloc, egrep
+Packages:     pacman, pamac, pip
+Programming:  python, scale, jshell, sass, gcc
+Security:     sudo, su, git, ssh, scp
+Clipboard:    pbcopy, pbpaste
+Help:         man, echo, clear, history, cal, whereis, which, whatis
+Network:      wget, curl, ping, ss
+Disk:         df, du
+Media:        song, pause, next, previous
+Processes:    ps, top
+
+#[REPL] - Read-Evaluate Print Loop.
+jshell        /exit
+python        quit()
+scala         :quit
+
+#[Files] - Config and documentation files.
+~/.bashrc
+~/.zshrc
+~/.startup.py
+/etc/hostname
+~/.config/neofetch/config.conf
+/etc/systemd/logind.conf
+
+#[IO] - Redirecting Input and Output.
+&>/dev/null    # Redirects all output to /dev/null
+1>/dev/null    # Redirects stdout to /dev/null
+2>/dev/null    # Redirects stderr to /dev/null
+
+#[Applications] - Application shortcuts.
+ckb-next      runescape  
+clonehero     spotify
+code          vim
+dolphin       sortingVisualiser
+firefox       typora
+neofetch      weka
+vlc           kate
+
+#[Grub] - GRUB config.
+Config:       /etc/default/grub
+File:         /usr/share/grub/
+Reload:       sudo update-grub 
+
+#[Other]
+sudo systemctl --failed # Detect Kernel errors.

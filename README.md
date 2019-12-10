@@ -1,2 +1,2 @@
-# config
-Personal configuration files such as: .bashrc, .zshrc
+# Configuration Files.
+Personal configuration files such as: .zshrc, aliases and commands.
