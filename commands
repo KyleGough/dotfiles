@@ -34,6 +34,9 @@ du -sh                               # View disk space used by a file.
 feh "<image file">                   # Views an image file.
 feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
 
+#[find] - Searches for files. 
+find .name '*.py' | xargs wc -l      # Counts the number of lines in each .py file.
+
 #[git] - Repositories.
 git config --global user.name "<name>"
 git config --global user.email "<email>"
