@@ -30,6 +30,19 @@ alias cp='cp -i'
 alias ln='ln -i'
 alias untar='tar -xvf'
 
+# Docker.
+P1="docker run -d -e 'GIT_EMAIL=kylegough98@gmail.com'"
+P2=" -e 'GIT_NAME=Kyle Gough' -e 'GIT_USERNAME=KyleGough'"
+P3=" -e 'GIT_REPO=github.com/KyleGough/portfolio.git'"
+P4=" -e 'GIT_PERSONAL_TOKEN=650ebc379bedb50ebe3848d8eab87467d8da5c0f'"
+P5=" richarvey/nginx-php-fpm:latest && docker container ls && firefox 172.17.0.2 &"
+alias portfolio-start="$P1$P2$P3$P4$P5"
+I1="echo -n 'Container IP: ' &&"
+I2=" docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+# IP should be defaulted to 172.17.0.2
+alias dockerip="$I1$I2"
+alias docker-stop='docker stop $(docker ps -a -q)'
+
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
 

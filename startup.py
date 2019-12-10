@@ -36,15 +36,14 @@ def todo():
     todoList = [
         "Sudoku",
         "Guitar",
-        "Apache Server: phpmyadmin",
-        "Docker",
         "cs910, cs413, project"
         ]
     for i in todoList:
         print("      " + okgreen(i), end='')
         yield
-    #print()
-    #yield
+    for j in range(2):
+        print("", end='')
+        yield
         
 
 cmdTxt, todoTxt = commands(), todo()

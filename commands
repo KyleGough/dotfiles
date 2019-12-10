@@ -26,6 +26,8 @@ docker port "<container>"            # Views available ports.
 docker run -d -P -v --name "<name>" "<container>" # Runs a container in detached mode. Publishes ports.
 docker start "<container>"           # Starts a container.
 docker stop "<container>"            # Stops a container.
+docker container ls -a               # Lists all containers.
+docker container rm "<containerID>"  # Deletes a container. 
 
 #[du] - Disk usage for a file.
 du -sh                               # View disk space used by a file.
@@ -102,6 +104,7 @@ Network:      wget, curl, ping, ss
 Disk:         df, du
 Media:        song, pause, next, previous
 Processes:    ps, top
+Archive:      zip, unzip, tar
 
 #[REPL] - Read-Evaluate Print Loop.
 jshell        /exit
