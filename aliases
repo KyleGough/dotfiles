@@ -62,6 +62,7 @@ alias plz='sudo'
 alias httpd='sudo code /etc/httpd/conf/httpd.conf'
 
 # Shortcuts.
+alias config='cd ~/Documents/config/'
 alias commands='vim ~/Documents/config/commands'
 alias aliases='vim ~/Documents/config/aliases && source ~/.zshrc'
 alias startup='vim ~/Documents/config/startup.py'
