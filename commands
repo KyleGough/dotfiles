@@ -38,6 +38,7 @@ feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
 
 #[find] - Searches for files. 
 find .name '*.py' | xargs wc -l      # Counts the number of lines in each .py file.
+find ~/Documents -name '.git'        # Displays all git repos.
 
 #[git] - Repositories.
 git config --global user.name "<name>"
@@ -59,6 +60,9 @@ egrep -v '^(;|#|//)'        # Shows a file, ignoring comments.
 #[import] - Screenshot.
 import "<filename>"         # Takes a screenshot of a defined region.
 import -screen "<filename>" # Takes a screenshot of the entire screen. 
+
+#[mgitstatus] - Credit: https://github.com/fboender/multi-git-status/
+mgitstatus ~/Documents
 
 #[pamac] - Arch User Repository.
 pamac -a "<package name>"        # Searches for packages.
