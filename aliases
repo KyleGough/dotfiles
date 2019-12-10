@@ -61,9 +61,6 @@ alias plz='sudo'
 # Servers.
 alias httpd='sudo code /etc/httpd/conf/httpd.conf'
 
-# SSH.
-alias ssh-joshua='ssh u1602448@joshua.dcs.warwick.ac.uk'
-
 # Shortcuts.
 alias commands='vim ~/Documents/config/commands'
 alias aliases='vim ~/Documents/config/aliases && source ~/.zshrc'
