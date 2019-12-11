@@ -65,6 +65,10 @@ alias docker='sudo docker'
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
 alias fire='aafire -driver curses'
 
+# Redshift.
+alias night='redshift -O 4250 &> /dev/null'
+alias day='redshift -x &> /dev/null'
+
 # Security.
 alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'

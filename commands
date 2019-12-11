@@ -81,6 +81,10 @@ pwd               # Prints the current directory.
 python "<file.py>"                               # Excutes a Python file.
 cat "<file.json>" | python -m json.tool          # Beautifty JSON file.
 
+#[redshift] - Blue light filter.
+redshift -x       # Reset.
+redshift -O 6500  # Set temperature.
+
 #[shutdown] - Shutdown and restart computer.
 shutdown -h now   # Shutdown computer immediately.
 shutdown -h 5     # Shutdown computer in 5 minutes.
