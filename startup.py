@@ -36,12 +36,14 @@ def todo():
     todoList = [
         "Sudoku",
         "Guitar",
-        "cs910, cs413, project"
+        "cs910 - Due 19th Dec",
+        "cs413 - Due 13th Jan",
+        "cs407 - Due 28th Apr"
         ]
     for i in todoList:
         print("      " + okgreen(i), end='')
         yield
-    for j in range(2):
+    for j in range(1):
         print("", end='')
         yield
         

@@ -96,8 +96,12 @@ ss -tulpan        # View open TCP and UDP ports.
 #[time] - Record how long a command takes to run.
 time ( "<command>" > /dev/null )                 # Record how long a command takes to run.
 
-#[uniq] - FIlters out duplicate lines.
+#[uniq] - Filters out duplicate lines.
 uniq "<file>"
+
+#[zshrc] - ZSHRC aliases.
+alias-finder "<search>"                          # Searchs for existing aliases.
+copyfile "<file>"                                # Copies a file's contents to the clipboard.
 
 #-----------------------------------------------------------------------------------#
 
