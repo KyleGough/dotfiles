@@ -14,11 +14,12 @@ neofetch --source ~/Pictures/ascii/goose.txt
 python ~/Documents/config/startup.py
 
 # Displays Git repo statuses.
-echo "     Git Repos"
+echo "     \033[95mGit Repos\033[0m"
+echo "     ---------------"
 mgitstatus -c --no-upstream ~/Documents | sed -e 's/^/     /'
 
 # Displays the current directory.
 echo ""
-echo "    " $(pwd)
-echo ""
+#echo "    " $(pwd)
+#echo ""
 
