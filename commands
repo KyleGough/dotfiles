@@ -93,6 +93,9 @@ restart           # Reboots the computer immediately.
 #[ss] - Socket investigator.
 ss -tulpan        # View open TCP and UDP ports.
 
+#[time] - Record how long a command takes to run.
+time ( "<command>" > /dev/null )                 # Record how long a command takes to run.
+
 #[uniq] - FIlters out duplicate lines.
 uniq "<file>"
 
