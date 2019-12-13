@@ -1,3 +1,0 @@
-docker start portfolio
-docker port portfolio
-firefox localhost:"<port>" &
