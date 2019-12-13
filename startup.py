@@ -14,15 +14,17 @@ def commands():
     yield    
     print("     ---------------                                     ", end='')
     yield    
-    print("     " + okgreen("Config Files") + ":    startup, aliases, commands        ", end='')
+    print("     " + okgreen("Config Files") + ":    startup, aliases, commands          ", end='')
     yield    
-    print("     " + okgreen("Text Editors") + ":    vim, code, typora, kate           ", end='')
+    print("     " + okgreen("Text Editors") + ":    vim, code, typora, kate             ", end='')
     yield    
-    print("     " + okgreen("Packages") + ":        pacman, pamac, pip, docker        ", end='')
+    print("     " + okgreen("Packages") + ":        pacman, pamac, pip, docker          " , end='')
     yield    
-    print("     " + okgreen("Media Control") + ":   song, pause, next, previous       ", end='')
+    print("     " + okgreen("Media Control") + ":   song, unpause, pause, next, previous", end='')
     yield
-    print("     " + okgreen("REPL") + ":            python, scala, jshell             ", end='')
+    print("     " + okgreen("REPL") + ":            python, scala, jshell               ", end='')
+    yield
+    print("     " + okgreen("QOL") + ":             day night                           ", end='')
     yield
     for i in range(5):
         print("                                                        ", end='')
@@ -38,10 +40,11 @@ def todo():
         "Guitar",
         "cs910 - Due 19th Dec",
         "cs413 - Due 13th Jan",
-        "cs407 - Due 28th Apr"
+        "cs407 - Due 28th Apr",
+        "Dan Party - 20th Dec"
         ]
     for i in todoList:
-        print("      " + okgreen(i), end='')
+        print("    " + okblue(i), end='')
         yield
     for j in range(1):
         print("", end='')

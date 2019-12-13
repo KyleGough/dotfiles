@@ -68,6 +68,9 @@ mgitstatus ~/Documents
 pamac -a "<package name>"        # Searches for packages.
 pamac build "<package name>"     # Builds a package.
 
+#[pandoc] - Document converter.
+pandoc -o output.pdf input.md    # Converts markdown file to LaTeX.
+
 #[ping] - Pings URL.
 ping -c 5         # Pings given URL 5 times.
 
@@ -98,6 +101,10 @@ time ( "<command>" > /dev/null )                 # Record how long a command tak
 
 #[uniq] - Filters out duplicate lines.
 uniq "<file>"
+
+#[wc] - Byte/Line/Word counter.
+wc -l "<file>"    # Counts line in a file.
+wc -w "<file>"    # Counts words in a file.
 
 #[zshrc] - ZSHRC aliases.
 alias-finder "<search>"                          # Searchs for existing aliases.

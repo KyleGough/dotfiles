@@ -50,7 +50,8 @@ alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\
 alias song='playerctl metadata --format "Now playing: {{ artist }} - {{ album }} - {{ title }}"'
 alias next='playerctl next && sleep 1 && song'
 alias previous='playerctl previous && sleep 1 && song'
-alias pause='playerctl play-pause'
+alias pause='playerctl pause'
+alias unpause='playerctl play'
 
 # Network.
 alias ip='curl icanhazip.com'
