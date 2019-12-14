@@ -31,21 +31,16 @@ def commands():
         yield    
 
 def todo():
-    print("     " + okgreen("Todo"), end='')
+    print("     " + okgreen("Todo"))
     yield    
-    print("     ---------------", end='')
+    print("     ---------------")
     yield
-    todoList = [
-        "Sudoku (90.4%)",
-        "Guitar",
-        "cs910 - Due 19th Dec",
-        "cs413 - Due 13th Jan",
-        "cs407 - Due 28th Apr",
-        "Dan Party - 20th Dec"
-        ]
-    for i in todoList:
-        print("    " + okblue(i), end='')
+
+    f = open("todo", "r")
+    for line in f:
+        print("    " + okblue(line), end='')
         yield
+
     for j in range(1):
         print("", end='')
         yield
@@ -57,7 +52,6 @@ while True:
         next(cmdTxt)
         print("      ", end='')
         next(todoTxt)
-        print()
     except StopIteration:
         print()
         break
