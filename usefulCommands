@@ -1,0 +1,6 @@
+Config Files|:    startup, aliases, commands          
+Text Editors|:    vim, code, typora, kate             
+Packages|:        pacman, pamac, pip, docker          
+Media Control|:   song, unpause, pause, next, previous
+REPL|:            python, scala, jshell               
+QOL|:             day night                           

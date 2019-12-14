@@ -14,18 +14,13 @@ def commands():
     yield    
     print("     ---------------                                     ", end='')
     yield    
-    print("     " + okgreen("Config Files") + ":    startup, aliases, commands          ", end='')
-    yield    
-    print("     " + okgreen("Text Editors") + ":    vim, code, typora, kate             ", end='')
-    yield    
-    print("     " + okgreen("Packages") + ":        pacman, pamac, pip, docker          " , end='')
-    yield    
-    print("     " + okgreen("Media Control") + ":   song, unpause, pause, next, previous", end='')
-    yield
-    print("     " + okgreen("REPL") + ":            python, scala, jshell               ", end='')
-    yield
-    print("     " + okgreen("QOL") + ":             day night                           ", end='')
-    yield
+   
+    f = open("/home/kyle/Documents/config/usefulCommands", "r")
+    for line in f:
+        cmd = line.split("|")
+        print("     " + okblue(cmd[0]) + cmd[1][:-1], end='')
+        yield
+
     for i in range(5):
         print("                                                        ", end='')
         yield    
@@ -36,9 +31,9 @@ def todo():
     print("     ---------------")
     yield
 
-    f = open("todo", "r")
+    f = open("/home/kyle/Documents/config/todo", "r")
     for line in f:
-        print("    " + okblue(line), end='')
+        print("    " + line, end='')
         yield
 
     for j in range(1):
