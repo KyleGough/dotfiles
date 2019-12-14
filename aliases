@@ -79,18 +79,20 @@ alias plz='sudo'
 # Servers.
 alias httpd='sudo code /etc/httpd/conf/httpd.conf'
 
-# Shortcuts.
+# Shortcuts (Config).
 alias config='cd ~/Documents/config/'
 alias commands='vim ~/Documents/config/commands'
 alias aliases='vim ~/Documents/config/aliases && source ~/.zshrc'
 alias startup='vim ~/Documents/config/startup.py'
 alias todo='vim ~/Documents/config/todo'
 alias zshrc='vim ~/.zshrc'
+alias grub='sudo vim /etc/default/grub'
+
+# Shortcuts (Directories).
 alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
-alias grub='sudo vim /etc/default/grub'
 alias usb='cd /run/media/kyle/'
 
 # Shutdown.
