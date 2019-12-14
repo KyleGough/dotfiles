@@ -145,6 +145,7 @@ scala         :quit
 &>/dev/null    # Redirects all output to /dev/null
 1>/dev/null    # Redirects stdout to /dev/null
 2>/dev/null    # Redirects stderr to /dev/null
+>>             # Appends to a file.
 
 #[Applications] - Application shortcuts.
 ckb-next      runescape  

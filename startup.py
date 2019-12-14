@@ -36,7 +36,7 @@ def todo():
     print("     ---------------", end='')
     yield
     todoList = [
-        "Sudoku",
+        "Sudoku (90.4%)",
         "Guitar",
         "cs910 - Due 19th Dec",
         "cs413 - Due 13th Jan",
