@@ -22,7 +22,7 @@ def commands():
         yield
 
     for i in range(5):
-        print("                                                        ", end='')
+        print("                                                          ", end='')
         yield    
 
 def todo():
