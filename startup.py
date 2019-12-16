@@ -31,7 +31,7 @@ def todo():
     print("     ---------------")
     yield
 
-    f = open("/home/kyle/Documents/config/todo", "r")
+    f = open("/home/kyle/Documents/todo", "r")
     for line in f:
         print("    " + line, end='')
         yield
