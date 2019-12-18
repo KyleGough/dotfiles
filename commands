@@ -71,6 +71,14 @@ pamac build "<package name>"     # Builds a package.
 #[pandoc] - Document converter.
 pandoc -o output.pdf input.md    # Converts markdown file to LaTeX.
 
+#[pass] - Password store.
+pass insert "<name>"/"<id>"      # Inserts a password.
+pass generate "<name>"/"<id>" 20 # Generates a password.
+pass -c "<name>"/"<id>"          # Copy password to clipboard.
+pass "<name>"/"<id>"             # Prints password.
+pass rm "<dir>"/"<id>"           # Removes a password.
+pass git init                    # Initialise password store as git repo.
+
 #[ping] - Pings URL.
 ping -c 5         # Pings given URL 5 times.
 
