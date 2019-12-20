@@ -108,6 +108,8 @@ alias lock='xdg-screensaver lock'
 unalias ll
 unalias ls
 unalias la
+unalias l
+alias l='ls -Alh --color=auto'
 alias ll='ls -Alh --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -Alh --color=auto'
