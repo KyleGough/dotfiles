@@ -64,6 +64,11 @@ import -screen "<filename>" # Takes a screenshot of the entire screen.
 #[mgitstatus] - Credit: https://github.com/fboender/multi-git-status/
 mgitstatus ~/Documents
 
+#[nmcli] - Network Manager CLI.
+nmcli dev wifi                                   # Shows available access points.
+nmcli device wifi connect "<network"> "<pass">   # Connects to a network.
+nmtui						 # Network manager TUI.
+
 #[pamac] - Arch User Repository.
 pamac -a "<package name>"        # Searches for packages.
 pamac build "<package name>"     # Builds a package.
@@ -148,6 +153,8 @@ scala         :quit
 /etc/hostname
 ~/.config/neofetch/config.conf
 /etc/systemd/logind.conf
+~/.config/i3/config
+/etc/i3status.conf
 
 #[IO] - Redirecting Input and Output.
 &>/dev/null    # Redirects all output to /dev/null
