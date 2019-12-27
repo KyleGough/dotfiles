@@ -14,7 +14,7 @@ def todo():
     print("     ---------------")
     yield
     for line in f:
-        print("    " + line, end='')
+        print("     " + line, end='')
         yield
     for j in range(1):
         print("", end='')

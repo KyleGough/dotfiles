@@ -1,0 +1,13 @@
+# Assigns apps to certain file types.
+
+# Vim.
+alias -s {txt,sh}=vim
+
+# Typora.
+alias -s md=typora
+
+# Code.
+alias -s py=code
+
+# Images.
+alias -s {png,jpg,jpeg}=feh
