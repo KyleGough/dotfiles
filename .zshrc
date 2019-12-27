@@ -13,7 +13,7 @@ ENABLE_CORRECTION="true"                     # Command auto-correction.
 plugins=(git alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
 source ~/Documents/config/globalAliases      # Custom aliases.
-source ~/Documents/config/.privateAliases    # Custom private aliases.
+source ~/Documents/config/privateAliases    # Custom private aliases.
 source ~/Documents/config/suffixAliases      # Custom suffix aliases. 
 source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 
