@@ -178,3 +178,14 @@ Reload:       sudo update-grub
 
 #[Other]
 sudo systemctl --failed # Detect Kernel errors.
+
+#-----------------------------------------------------------------------------------#
+
+# i3 Shortcuts
+MOD + n            # Change to desktop n.
+MOD + SHIFT + n    # Move window to desktop n.
+MOD + f            # Fullscreen window.
+MOD + SHIFT + q    # Close window.
+
+# Firefox Shortcuts.
+ALT + n            # Switch to tab n.
