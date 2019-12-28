@@ -4,10 +4,10 @@
 alias -s {txt,sh}=vim
 
 # Typora.
-alias -s md=typora
+alias -s {md}=typora
 
 # Code.
-alias -s py=code
+alias -s {py}=code
 
 # Images.
 alias -s {png,jpg,jpeg}=feh
