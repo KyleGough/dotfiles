@@ -105,10 +105,6 @@ alias restart='shutdown -r now'
 alias lock='xdg-screensaver lock'
 
 # Terminal.
-unalias ll
-unalias ls
-unalias la
-unalias l
 alias l='ls -Alh --color=auto'
 alias ll='ls -Alh --color=auto'
 alias ls='ls --color=auto'
