@@ -4,6 +4,9 @@
 # Desktop Wallpaper.
 exec --no-startup-id sh ~/.fehbg
 
+# Startup Programs.
+exec cool-retro-term
+
 set $mod Mod4
 
 # Window Title Font.
