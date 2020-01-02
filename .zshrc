@@ -22,9 +22,9 @@ source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 #----------------------------------------------------------------------------------#
 
 # Prints the ASCII art for my name.
-echo ""
-cat ~/Pictures/ascii/name.txt
-echo ""
+#echo ""
+#cat ~/Pictures/ascii/name.txt
+#echo ""
 echo ""
 
 # Displays neofetch.
@@ -39,3 +39,5 @@ echo "     \033[95mGit Repos\033[0m"
 echo "     ---------------"
 mgitstatus -c --no-upstream ~/Documents | sort | sed -e 's/^/     /'
 echo ""
+
+cd ~/Documents
