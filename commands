@@ -123,6 +123,9 @@ uniq "<file>"
 wc -l "<file>"    # Counts line in a file.
 wc -w "<file>"    # Counts words in a file.
 
+#[xeh] - Keybinds.
+xeh               # Outputs keybind details.
+
 #[zshrc] - ZSHRC aliases.
 alias-finder "<search>"                          # Searchs for existing aliases.
 copyfile "<file>"                                # Copies a file's contents to the clipboard.
