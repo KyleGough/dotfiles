@@ -8,8 +8,9 @@ def bold(msg): return "\033[1m" + msg + "\033[0m"
 def underline(msg): return "\033[4m" + msg + "\033[0m"
 
 def todo():
+    count = len(open("/home/kyle/Documents/todo", "r").readlines())
+    print("     " + header("Todo") + " (" + okblue(str(count)) + ")")
     f = open("/home/kyle/Documents/todo", "r")
-    print("     " + okgreen("Todo"))
     yield    
     print("     ---------------")
     yield
