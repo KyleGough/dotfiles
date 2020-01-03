@@ -119,6 +119,9 @@ time ( "<command>" > /dev/null )                 # Record how long a command tak
 #[uniq] - Filters out duplicate lines.
 uniq "<file>"
 
+#[vim] - Text Editor.
+vim +128 "<file>" # Jump to line 128 in file.
+
 #[wc] - Byte/Line/Word counter.
 wc -l "<file>"    # Counts line in a file.
 wc -w "<file>"    # Counts words in a file.
