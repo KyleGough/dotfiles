@@ -55,8 +55,9 @@ git add "<file>"
 git commit -m "<commit message>"
 git push origin "<branch>"
 git pull origin "<branch>"
-git branch "<branch>"
-git checkout "<branch>"
+git branch "<branch>"                # Create branch.
+git checkout "<branch>"              # Switch to branch,
+git rev-list --all --count           # Display commit count.
 
 #[grep] - REGEX matching.
 egrep -v '^(;|#|//)'        # Shows a file, ignoring comments.
