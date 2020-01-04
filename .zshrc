@@ -32,7 +32,9 @@ python ~/Documents/config/startup.py
 echo ""
 
 # Displays Git repo statuses.
-echo "     \033[95mGit Repositories\033[0m"
+repos="$(mgitstatus -c --no-upstream ~/Documents)"
+num_repos="$(echo $repos | wc -l)"
+echo "     \033[95mGit Repositories\033[0m (\033[94m$num_repos\033[0m)"
 echo "     ---------------"
-mgitstatus -c --no-upstream ~/Documents | sort | sed -e 's/^/     /'
+echo $repos | sort | sed -e 's/^/     /'
 echo ""
