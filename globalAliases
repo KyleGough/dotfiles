@@ -98,6 +98,7 @@ alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
 alias usb='cd /run/media/kyle/'
+alias home='cd ~/Documents && reload'
 
 # Shutdown.
 alias shutdown='shutdown -h now'
