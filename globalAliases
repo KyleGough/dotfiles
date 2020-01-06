@@ -49,6 +49,7 @@ alias pass-hide='fusermount -u ~/.password-store'
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
+alias diff='git diff'
 
 # Media Controller.
 alias song='playerctl metadata --format "Now playing: {{ artist }} - {{ album }} - {{ title }}"'
