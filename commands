@@ -9,6 +9,10 @@ cloc .           # Counts lines in files.
 chsh -l          # List installed shells.
 chsh -s <path>   # Set default shell.
 
+#[compilers]
+gcc -o "<output file>" "<source files>"
+g++ -o "<output file>" "<source files>"
+
 #[convert] - Converts Image formats.
 convert "<original>" "<new>"         # Converts one file to another format.
 convert "<file>".bmp "<file>".png    # Converts bmp file to png.
