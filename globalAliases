@@ -16,6 +16,11 @@ alias sudoku='cd ~/Documents/sudoku'
 alias cs413='cd ~/Documents/cs413'
 alias portfolio='cd ~/Documents/portfolio'
 alias cs910='cd ~/Documents/cs910/cw'
+alias cs904='cd ~/Documents/cs904'
+alias cs910='cd ~/Documents/cs910'
+alias cs402='cd ~/Documents/cs402'
+alias cs407='cd ~/Documents/cs407'
+alias cs419='cd ~/Documents/cs419'
 
 # Directories.
 alias ..='cd ..'
