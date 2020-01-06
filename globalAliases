@@ -57,7 +57,8 @@ alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\
 alias diff='git diff'
 
 upload() {
-  git add . && git commit -m $1 && git push origin $2
+  branchName=$(git branch --show-current)
+  git add . && git commit -m $1 && git push origin $branchName
 }
 
 # Media Controller.
