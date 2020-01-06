@@ -116,6 +116,7 @@ alias h='history'
 alias hs='history | grep'
 alias c='clear'
 alias neofetch='neofetch --source /home/kyle/Pictures/ascii/goose.txt'
+alias v='vim'
 
 # Web.
 alias google='firefox google.co.uk &'
