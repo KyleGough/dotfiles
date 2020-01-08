@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 #cat ~/Pictures/ascii/name.txt"
 
 # Displays neofetch.
-neofetch # --source ~/Pictures/ascii/goose.txt
+neofetch --source ~/Documents/config/media/goose.txt
 
 # Displays useful commands and todo list.
 python ~/Documents/config/startup.py
