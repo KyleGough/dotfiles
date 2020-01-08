@@ -13,14 +13,14 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Current Projects
 alias sudoku='cd ~/Documents/sudoku'
-alias cs413='cd ~/Documents/cs413'
 alias portfolio='cd ~/Documents/portfolio'
 alias cs910='cd ~/Documents/cs910/cw'
-alias cs904='cd ~/Documents/cs904'
-alias cs910='cd ~/Documents/cs910'
-alias cs402='cd ~/Documents/cs402'
-alias cs407='cd ~/Documents/cs407'
-alias cs419='cd ~/Documents/cs419'
+alias cs904='cd ~/Documents/"cs904: Computational Biology"'
+alias cs910='cd ~/Documents/"cs910: Data Analytics"'
+alias cs402='cd ~/Documents/"cs402: High Performance Computing"'
+alias cs407='cd ~/Documents/"cs407: Group Project"'
+alias cs413='cd ~/Documents/"cs413: Image and Video"'
+alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
 
 # Directories.
 alias ..='cd ..'
