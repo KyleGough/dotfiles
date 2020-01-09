@@ -1,10 +1,10 @@
 # Desktop Wallpaper.
 exec --no-startup-id sh ~/.fehbg
 
-# Startup Programs.
+# Opens the terminal on startup.
 exec cool-retro-term
 
-# Modifier button.
+# Modifier button (Windows key).
 set $mod Mod4
 
 # Window Title Font.
@@ -21,6 +21,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+
+####################################################################################################
+# KEYBINDS                                                                                         #
+####################################################################################################
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -83,25 +88,28 @@ bindsym $mod+v split v
 # Enter fullscreen mode for the focused container.
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Changes container layout (Stacked, Tabbed or Toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating.
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling / floating windows.
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# Focus the parent container.
 bindsym $mod+a focus parent
 
-# focus the child container
+# Focus the child container.
 #bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+###################################################################################################
+# Workspaces                                                                                      #
+###################################################################################################
+
+# Define names for default workspaces.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -137,16 +145,22 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
+###################################################################################################
+# Other                                                                                           #
+###################################################################################################
+
+# Reloads the configuration file.
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+
+# Restarts i3 inplace. (Preserves layout/session)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+
+# Exits i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# Resize window. (Can also use the mouse.)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+        # These bindings trigger as soon as resize mode is entered.
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
@@ -157,18 +171,19 @@ mode "resize" {
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+        # Same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        # Back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 
+# Resize mode.
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
