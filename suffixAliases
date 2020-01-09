@@ -7,7 +7,7 @@ alias -s {txt,sh}=vim
 alias -s {md}=typora
 
 # Code.
-alias -s {py}=code
+alias -s {py,c,cpp,java}=code
 
 # Images.
-alias -s {png,jpg,jpeg}=feh
+alias -s {png,jpg,jpeg,bmp,gif}=feh
