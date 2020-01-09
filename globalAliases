@@ -126,5 +126,5 @@ alias gslides='firefox https://docs.google.com/presentation/u/0/ &'
 alias gsheets='firefox https://docs.google.com/spreadsheets/u/0/ &'
 alias gdocs='firefox https://docs.google.com/document/u/0/ &'
 
-# DON'T FORGET TO RELOAD
+# DON'T FORGET TO RELOAD. Config should automatically reload when this file is closed.
 alias reload='clear && source ~/.zshrc'
