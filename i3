@@ -9,7 +9,7 @@ set $mod Mod4
 
 # Window Title Font.
 #font pango:monospace 8
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8, Awesome 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -189,5 +189,6 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    font pango:DejaVu Sans Mono, Awesome 8
     status_command    i3status #/home/kyle/Documents/config/keyIndicator.sh
 }
