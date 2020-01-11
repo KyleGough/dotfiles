@@ -27,6 +27,13 @@ exec --no-startup-id nm-applet
 # KEYBINDS                                                                                         #
 ####################################################################################################
 
+# Window borders.
+bindsym $mod+i border pixel 3
+bindsym $mod+u border none
+
+# Screenshot program.
+bindsym $mod+Print exec flameshot gui
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -186,9 +193,13 @@ mode "resize" {
 # Resize mode.
 bindsym $mod+r mode "resize"
 
+for_window [class="^.*"] border pixel 3
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
     font pango:DejaVu Sans Mono, Awesome 8
     status_command    i3status #/home/kyle/Documents/config/keyIndicator.sh
 }
+
+exec spotify
