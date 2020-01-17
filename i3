@@ -34,6 +34,11 @@ bindsym $mod+u border none
 # Screenshot program.
 bindsym $mod+Print exec flameshot gui
 
+# Audio player.
+bindsym $mod+comma exec playerctl previous
+bindsym $mod+period exec playerctl next
+bindsym $mod+slash exec playerctl play-pause
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -199,7 +204,7 @@ for_window [class="^.*"] border pixel 3
 # finds out, if available)
 bar {
     font pango:DejaVu Sans Mono, Awesome 8
-    status_command    i3status #/home/kyle/Documents/config/keyIndicator.sh
+    status_command    i3status #i3blocks -c ~/Documents/config/i3blocks.conf
 }
 
 exec spotify

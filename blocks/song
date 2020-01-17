@@ -1,0 +1,5 @@
+#|/bin/bash
+
+SONG=$(playerctl metadata --format "{{ artist }} - {{ title }}")
+echo "${SONG}"
+return 0
