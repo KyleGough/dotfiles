@@ -1,0 +1,22 @@
+Hold down CTRL+SHIFT then type the unicode.
+###########################################
+∪ | u222A | Union
+∩ | u2229 | Intersection
+∈ | u2208 | Member of
+∌ | u220C | Not member of
+∀ | u2200 | For all
+∃ | u2203 | There exists
+∄ | u2204 | There doesn't exist
+∑ | u2211 | Sum (Capital Sigma)
+√ | u221A | Square Root 
+ℝ | u221D | Real numbers
+ℂ | u2102 | Complex numbers
+𝜋 | u1D70B | Pi 
+𝛅 | u1D6C5 | Delta
+𝛆 | u1D6C6 | Epsilon
+𝛉 | u1D6C9 | Theta
+𝛔 | u1D6D4 | Sigma
+φ | u03C6 | Phi
+⊆ | u2286 | Subset
+≈ | u2248 | Approximately
+⊗ | u2297 | Tensor Product (Circled Times)
