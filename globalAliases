@@ -69,6 +69,7 @@ alias docker='sudo docker'
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
 alias fire='aafire -driver curses'
+alias symbols='cat ~/Documents/symbols'
 
 # Redshift.
 alias night='redshift -O 4250 &> /dev/null'
