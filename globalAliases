@@ -19,7 +19,7 @@ alias cs910='cd ~/Documents/cs910/cw'
 alias cs904='cd ~/Documents/"cs904: Computational Biology"'
 alias cs910='cd ~/Documents/"cs910: Data Analytics"'
 alias cs402='cd ~/Documents/"cs402: High Performance Computing"'
-alias cs407='cd ~/Documents/"cs407: Group Project"'
+alias lucidlab='cd ~/Documents/lucidlab'
 alias cs413='cd ~/Documents/"cs413: Image and Video"'
 alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
 
