@@ -23,6 +23,14 @@ alias lucidlab='cd ~/Documents/lucidlab'
 alias cs413='cd ~/Documents/"cs413: Image and Video"'
 alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
 
+# Custom Workspaces
+workspace-cs419() {
+  cd ~/Documents/"cs419: Quantum Computing";
+  firefox "https://warwick.ac.uk/fac/sci/dcs/people/tom_gur/quantum2020";
+  typora notes.md&;
+}
+
+
 # Directories.
 alias ..='cd ..'
 alias ...='cd ../..'
