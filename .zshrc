@@ -13,7 +13,7 @@ ENABLE_CORRECTION="true"                     # Command auto-correction.
 plugins=(git alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
 source ~/Documents/config/globalAliases      # Custom aliases.
-source ~/Documents/config/privateAliases    # Custom private aliases.
+source ~/Documents/config/privateAliases     # Custom private aliases.
 source ~/Documents/config/suffixAliases      # Custom suffix aliases. 
 source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 
@@ -34,6 +34,7 @@ echo ""
 # Displays Git repo statuses.
 repos="$(mgitstatus -c --no-upstream ~/Documents)"
 num_repos="$(echo $repos | wc -l)"
+
 echo "     \033[95mGit Repositories\033[0m (\033[94m$num_repos\033[0m)"
 echo "     ---------------"
 echo $repos | sort | sed -e 's/^/     /'
