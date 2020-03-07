@@ -25,4 +25,5 @@ Hold down CTRL+SHIFT then type the unicode.
 ≈ | u2248 | Approximately
 ⊗ | u2297 | Tensor Product (Circled Times)
 ∝ | u221D | Proportional
+∞ | u221E | Infinite
 ⊕ | u2295 | XOR
