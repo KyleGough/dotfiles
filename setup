@@ -1,0 +1,44 @@
+# Manjaro Post-Installation Setup:
+
+
+# Internet Connection
+nmtui
+
+# Hostname
+sudo vim /etc/hostname
+
+# Pacman
+sudo pacman -Sy
+
+# Firefox
+sudo pacman -S firefox
+
+# mgitstatus
+git clone https://github.com/fboender/multi-git-status.git
+cd multi-git-status
+sudo ./install.sh
+
+# ZSH
+sudo pacman -S zsh
+chsh -s /usr/bin/zsh
+-- LOG OUT / RESTART
+
+# Text Files
+touch ~/Documents/todo
+
+# Config
+git clone https://www.github.com/KyleGough/config.git
+rm ~/.vimrc
+rm ~/.zshrc
+cd config
+ln .zshrc ~/.zshrc
+ln .vimrc ~/.vimrc
+
+# Neofetch
+sudo pacman -S neofetch
+rm ~/.config/neofetch/config.conf
+ln ~/Documents/config/neofetch.conf ~/.config/neofetch/config.conf
+
+# Load scripts.
+source ~/.zshrc
+
