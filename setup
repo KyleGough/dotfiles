@@ -7,6 +7,10 @@ nmtui
 # Hostname
 sudo vim /etc/hostname
 
+# Git
+git config --global user.name "ABC"
+git config --global user.email "abc@abc.com"
+
 # Pacman
 sudo pacman -Sy
 
