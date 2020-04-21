@@ -48,3 +48,7 @@ source ~/.zshrc
 
 # Apps
 pamac build spotify
+
+# Audio
+sudo pacman -S playerctl
+sudo pacman -S pulseaudio
