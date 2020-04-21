@@ -37,5 +37,5 @@ num_repos="$(echo $repos | wc -l)"
 
 echo "     \033[95mGit Repositories\033[0m (\033[94m$num_repos\033[0m)"
 echo "     ---------------"
-echo $repos | sort | sed -e 's/^/     /'
+echo $repos | sort | sed -e 's/^\/home\/kyle\/Documents\//     /'
 echo ""
