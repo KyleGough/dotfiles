@@ -12,7 +12,7 @@ git config --global user.name "ABC"
 git config --global user.email "abc@abc.com"
 
 # Pacman
-sudo pacman -Sy
+sudo pacman -Syu
 
 # Firefox
 sudo pacman -S firefox
@@ -46,3 +46,5 @@ ln ~/Documents/config/neofetch.conf ~/.config/neofetch/config.conf
 # Load scripts.
 source ~/.zshrc
 
+# Apps
+pamac build spotify
