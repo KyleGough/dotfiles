@@ -43,6 +43,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 alias untar='tar -xvf'
+alias cl='clear && ls -al'
 
 # Encrypted Directory.
 alias pass-show='encfs ~/.password-store-encrypted ~/.password-store'
