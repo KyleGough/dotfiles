@@ -51,6 +51,7 @@ pamac build spotify
 pamac build clonehero
 sudo pacman -S cool-retro-term
 pamac build typora
+sudo pacman -S deepin-screenshot
 
 # Other
 sudo pip install pipenv
