@@ -178,13 +178,10 @@ scala         :quit
 >>             # Appends to a file.
 
 #[Applications] - Application shortcuts.
-ckb-next      runescape  
 clonehero     spotify
 code          vim
-dolphin       sortingVisualiser
 firefox       typora
-neofetch      weka
-vlc           kate
+neofetch      vlc
 
 #[Grub] - GRUB config.
 Config:       /etc/default/grub

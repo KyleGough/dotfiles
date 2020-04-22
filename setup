@@ -43,11 +43,19 @@ sudo pacman -S neofetch
 rm ~/.config/neofetch/config.conf
 ln ~/Documents/config/neofetch.conf ~/.config/neofetch/config.conf
 
-# Load scripts.
+# Load scripts
 source ~/.zshrc
 
 # Apps
 pamac build spotify
+pamac build clonehero
+sudo pacman -S cool-retro-term
+pamac build typora
+
+# Other
+sudo pip install pipenv
+sudo pacman -S influxdb
+pamac build python37
 
 # Audio
 sudo pacman -S playerctl

@@ -3,7 +3,7 @@ compinit
 
 # Applications.
 alias runescape='/usr/bin/runescape-launcher &'
-alias clonehero='/usr/bin/clonehero/clonehero &'
+alias clonehero='/usr/bin/clonehero'
 alias sortingVisualiser='wine /usr/bin/sortingVisualiser.exe &'
 alias spotify='spotify &'
 alias minecraft='/usr/bin/minecraft-launcher/minecraft-launcher &'
@@ -29,7 +29,6 @@ workspace-cs419() {
   firefox "https://warwick.ac.uk/fac/sci/dcs/people/tom_gur/quantum2020";
   typora notes.md&;
 }
-
 
 # Directories.
 alias ..='cd ..'
