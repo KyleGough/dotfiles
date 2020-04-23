@@ -45,11 +45,12 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
+# Volume Control
 bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -67,17 +68,17 @@ bindsym $mod+F8 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ togg
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec pcmanfm # File explorer.
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu' # Terminal B-Menu.
+bindsym $mod+F2 exec firefox                 # Web Browser.
+bindsym $mod+F3 exec pcmanfm                 # GUI File explorer.
+bindsym $mod+F4 exec terminal -e 'ranger'    # Terminal File Explorer.
+bindsym $mod+Shift+F3 exec pcmanfm_pkexec    # File explorer (root).
+bindsym $mod+F5 exec spotify                 # Spotify Music Player.
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print exec deepin-screenshot
+bindsym Print exec --no-startup-id i3-scrot  # Save Screen.
+bindsym $mod+Print exec deepin-screenshot    # Screen Capture Tool.
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
