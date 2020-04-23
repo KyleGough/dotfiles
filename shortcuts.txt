@@ -1,4 +1,5 @@
-F1:
+SHORTCUTS
 F2: Firefox
 F3: GUI File Explorer
 F4: CLI File Explorer
+F5: Spotify

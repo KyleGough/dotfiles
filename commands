@@ -183,7 +183,7 @@ code          vim
 firefox       typora
 neofetch      vlc
 keeppassxs    simplenote
-thunderbird
+thunderbird   ufw
 
 #[Grub] - GRUB config.
 Config:       /etc/default/grub

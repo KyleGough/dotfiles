@@ -22,12 +22,12 @@ git clone https://github.com/fboender/multi-git-status.git
 cd multi-git-status
 sudo ./install.sh
 
-# ZSH
+# ZSH Shell
 sudo pacman -S zsh
 chsh -s /usr/bin/zsh
 -- LOG OUT / RESTART
 
-# Config
+# Config Repository.
 git clone https://www.github.com/KyleGough/config.git
 rm ~/.vimrc
 rm ~/.zshrc
@@ -39,7 +39,7 @@ touch ~/Documents/todo
 # Neofetch
 sudo pacman -S neofetch
 rm ~/.config/neofetch/config.conf
-ln ~/Documents/config/neofetch.conf ~/.config/neofetch/config.conf
+ln neofetch.conf ~/.config/neofetch/config.conf
 
 # Load scripts
 source ~/.zshrc
@@ -53,13 +53,16 @@ sudo pacman -S deepin-screenshot
 pamac build simplenote-electron-bin
 
 # Developer Tools
+sudo pacman -S code
 sudo pip install pipenv
-sudo pacman -S influxdb
-pamac build python37
 
 # Audio
 sudo pacman -S playerctl
 sudo pacman -S pulseaudio
 
-# Security
+# Passwords
 sudo pacman -S keepassxc
+
+# Torrenting
+sudo pacman -S qbittorrent
+mkdir ~/Downloads/torrents
