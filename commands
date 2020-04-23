@@ -97,7 +97,7 @@ pass git init                    # Initialise password store as git repo.
 ping -c 5         # Pings given URL 5 times.
 
 #[ps] - View processes.
-ps aux            # View all processes in BSD syntax..
+ps aux            # View all processes in BSD syntax.
 
 #[pwd] - Current directory.
 pwd               # Prints the current directory.
@@ -145,7 +145,7 @@ Directory:    mkdir, ls, cp, rm, cd, mv, rmdir, ln
 Files:        touch, less, head, tail
 Permissions:  chmod, chwon, chgrp
 Output:       grep, wc, sort, cloc, egrep
-Packages:     pacman, pamac, pip
+Packages:     pacman, pamac, pip, npm
 Programming:  python, scale, jshell, sass, gcc
 Security:     sudo, su, git, ssh, scp
 Clipboard:    pbcopy, pbpaste
@@ -183,6 +183,7 @@ code          vim
 firefox       typora
 neofetch      vlc
 keeppassxs    simplenote
+thunderbird
 
 #[Grub] - GRUB config.
 Config:       /etc/default/grub
