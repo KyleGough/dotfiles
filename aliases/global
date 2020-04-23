@@ -4,7 +4,6 @@ compinit
 # Applications.
 alias runescape='/usr/bin/runescape-launcher &'
 alias clonehero='/usr/bin/clonehero'
-alias sortingVisualiser='wine /usr/bin/sortingVisualiser.exe &'
 alias spotify='spotify &'
 alias minecraft='/usr/bin/minecraft-launcher/minecraft-launcher &'
 
@@ -127,15 +126,15 @@ alias c='clear'
 alias neofetch='neofetch --source /home/kyle/Pictures/ascii/goose.txt'
 alias v='vim'
 
-# Web.
-alias google='firefox google.co.uk &'
-alias youtube='firefox youtube.co.uk &'
-alias github='firefox github.com &'
-alias amazon='firefox amazom.co.uk &'
-alias netflix='firefox netflix.co.uk &'
-alias gslides='firefox https://docs.google.com/presentation/u/0/ &'
-alias gsheets='firefox https://docs.google.com/spreadsheets/u/0/ &'
-alias gdocs='firefox https://docs.google.com/document/u/0/ &'
+# Web (Uses default browser).
+alias google='xdg-open google.co.uk &'
+alias youtube='xdg-open youtube.co.uk &'
+alias github='xdg-open github.com &'
+alias amazon='xdg-open amazom.co.uk &'
+alias netflix='xdg-open netflix.co.uk &'
+alias gslides='xdg-open https://docs.google.com/presentation/u/0/ &'
+alias gsheets='xdg-open https://docs.google.com/spreadsheets/u/0/ &'
+alias gdocs='xdg-open https://docs.google.com/document/u/0/ &'
 
 # DON'T FORGET TO RELOAD. Config should automatically reload when this file is closed.
 alias reload='clear && source ~/.zshrc'

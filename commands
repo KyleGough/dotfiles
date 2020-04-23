@@ -182,6 +182,7 @@ clonehero     spotify
 code          vim
 firefox       typora
 neofetch      vlc
+keeppassxs    simplenote
 
 #[Grub] - GRUB config.
 Config:       /etc/default/grub

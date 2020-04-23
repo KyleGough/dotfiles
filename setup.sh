@@ -27,9 +27,6 @@ sudo pacman -S zsh
 chsh -s /usr/bin/zsh
 -- LOG OUT / RESTART
 
-# Text Files
-touch ~/Documents/todo
-
 # Config
 git clone https://www.github.com/KyleGough/config.git
 rm ~/.vimrc
@@ -37,6 +34,7 @@ rm ~/.zshrc
 cd config
 ln .zshrc ~/.zshrc
 ln .vimrc ~/.vimrc
+touch ~/Documents/todo
 
 # Neofetch
 sudo pacman -S neofetch
@@ -52,8 +50,9 @@ pamac build clonehero
 sudo pacman -S cool-retro-term
 pamac build typora
 sudo pacman -S deepin-screenshot
+pamac build simplenote-electron-bin
 
-# Other
+# Developer Tools
 sudo pip install pipenv
 sudo pacman -S influxdb
 pamac build python37
@@ -61,3 +60,6 @@ pamac build python37
 # Audio
 sudo pacman -S playerctl
 sudo pacman -S pulseaudio
+
+# Security
+sudo pacman -S keepassxc
