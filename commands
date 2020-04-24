@@ -184,6 +184,7 @@ firefox       typora
 neofetch      vlc
 keeppassxs    simplenote
 thunderbird   ufw
+draw.io
 
 #[Grub] - GRUB config.
 Config:       /etc/default/grub

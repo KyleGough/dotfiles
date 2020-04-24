@@ -55,6 +55,7 @@ pamac build simplenote-electron-bin
 # Developer Tools
 sudo pacman -S code
 sudo pip install pipenv
+pamac build drawio-desktop
 
 # Audio
 sudo pacman -S playerctl
