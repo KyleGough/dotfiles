@@ -44,6 +44,9 @@ ln neofetch.conf ~/.config/neofetch/config.conf
 # Load scripts
 source ~/.zshrc
 
+# i3
+sudo pacman -S py3status
+
 # Apps
 pamac build spotify
 pamac build clonehero
