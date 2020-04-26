@@ -106,7 +106,9 @@ pamac build spotify
 # Passwords
 sudo pacman -S keepassxc
 
-# Torrenting
+# Torrenting/Downloading
+sudo pacman -S ffmpeg
+pamac build youtube-dl
 sudo pacman -S qbittorrent
 mkdir ~/Downloads/torrents
 
