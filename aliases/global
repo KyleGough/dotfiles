@@ -76,11 +76,6 @@ alias day='redshift -x &> /dev/null'
 # Security.
 alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'
-alias please='sudo'
-alias plz='sudo'
-
-# Servers.
-alias httpd='sudo code /etc/httpd/conf/httpd.conf'
 
 # Shortcuts (Config).
 alias config='cd ~/Documents/config/'
@@ -115,6 +110,10 @@ alias hs='history | grep'
 alias c='clear'
 alias neofetch='neofetch --source /home/kyle/Pictures/ascii/goose.txt'
 alias v='vim'
+
+# Downloads.
+alias youtube-audio='youtube-dl -x -f bestaudio'
+alias youtube-metadata='youtube-dl -qse --get-title --get-duration --get-description'
 
 # Web (Uses default browser).
 alias google='xdg-open google.co.uk &'
