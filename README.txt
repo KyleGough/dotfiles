@@ -34,9 +34,9 @@ chsh -s /usr/bin/zsh
 #|----------------------------------------------|#
 cd ~/Documents
 git clone https://www.github.com/KyleGough/config.git
-rm ~/.vimrc
-rm ~/.zshrc
 cd config
+sudo rm ~/.vimrc
+rm ~/.zshrc
 ln .zshrc ~/.zshrc
 ln .vimrc ~/.vimrc
 touch ~/Documents/todo
@@ -45,10 +45,10 @@ touch ~/Documents/todo
 #| 7) Apply i3 config files.                    |# 
 #|----------------------------------------------|#
 sudo rm ~/.i3/config
-sudo rm /etc/i3status.conf 
-sudo ln i3/i3 ~/.i3/config
-sudo ln i3/i3status.conf /etc/i3status.conf
-sudo pacman -S py3status
+rm /etc/i3status.conf 
+ln i3/i3 ~/.i3/config
+ln i3/i3status.conf /etc/i3status.conf
+pacman -S py3status
 # Reload i3 with $mod+SHIFT+R
 
 #|----------------------------------------------|#
@@ -69,7 +69,7 @@ cd multi-git-status
 sudo ./install.sh
 
 #|----------------------------------------------|#
-#| 10) Load Scripts and Aliases.                |#
+#| 10) Load Custom Scripts and Aliases.         |#
 #|----------------------------------------------|#
 source ~/.zshrc
 reload
