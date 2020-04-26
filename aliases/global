@@ -7,14 +7,14 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Current Projects
 alias sudoku='cd ~/Documents/sudoku'
-alias portfolio='cd ~/Documents/portfolio'
-alias cs910='cd ~/Documents/cs910/cw'
-alias cs904='cd ~/Documents/"cs904: Computational Biology"'
-alias cs910='cd ~/Documents/"cs910: Data Analytics"'
-alias cs402='cd ~/Documents/"cs402: High Performance Computing"'
+#alias portfolio='cd ~/Documents/portfolio'
+#alias cs910='cd ~/Documents/cs910/cw'
+#alias cs904='cd ~/Documents/"cs904: Computational Biology"'
+#alias cs910='cd ~/Documents/"cs910: Data Analytics"'
+#alias cs402='cd ~/Documents/"cs402: High Performance Computing"'
 alias lucidlab='cd ~/Documents/lucidlab'
-alias cs413='cd ~/Documents/"cs413: Image and Video"'
-alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
+#alias cs413='cd ~/Documents/"cs413: Image and Video"'
+#alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
 
 # Custom Workspaces
 workspace-cs419() {
@@ -89,6 +89,7 @@ alias aliases='vim ~/Documents/config/aliases/global && source ~/.zshrc'
 alias startup='vim ~/Documents/config/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc'
+alias torrents='cd ~/Downloads/torrents/'
 
 # Shortcuts (Directories).
 alias docs='cd ~/Documents'
