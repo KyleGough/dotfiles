@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"               # Red dots whilst waiting for compl
 ENABLE_CORRECTION="true"                     # Command auto-correction.
 
 # ZSH Plugins.
-plugins=(git alias-finder colored-man-pages docker python themes frontend-search copyfile)
+plugins=(git extract fancy-ctrl-z node npm sudo vscode zsh-autosuggestions alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
 # Config Repository Location.
 CONFIG_PATH="/home/kyle/Documents/config"

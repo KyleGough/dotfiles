@@ -1,0 +1,77 @@
+cal                                   # Displays simple calendar.
+cat                                   # Print file contents.
+cd                                    # Change directory.
+chgrp                                 # Change file group.
+chmod                                 # Change file permissions.
+chsh                                  # Shell management.
+chwon                                 # CHange file owenership.
+clear                                 # Clears terminal.
+cloc                                  # Line count.
+convert                               # Convert image formats.
+cp                                    # Copy file/directory.
+curl                                  # Transfer data.
+df                                    # Disk space usage.
+du                                    # Estimate file space usage.
+echo                                  # Print.
+extract                               # [ZSH Plugin] Extract archive.
+find                                  # Search for files.
+git                                   # Git.
+gcc                                   # C and C++ compiler.
+grep                                  # Print matching lines.
+head                                  # Print first N lines of file.
+history                               # Command history.
+import                                # Screenshot.
+ip                                    # Print IP.
+ln                                    # Create soft link.
+ls                                    # List directory contents.
+man                                   # Manual page.            
+mgitstatus                            # [Repo] Repository status.                   
+mkdir                                 # Create directory.
+mv                                    # Move file/directory.
+next                                  # [Alias] Skip to next song.
+nmtui                                 # GUI network manager.
+npm                                   # Node.js package manager.
+pacman                                # Arch-based distro package manager.
+pamac                                 # Arch user repository package manager.
+pause                                 # [Alias] Pause song.
+pbcopy                                # Copy to clipboard.
+pbpaste                               # Paste clipboard.
+ping                                  # Send ICMP echo request.
+pip                                   # Python packager manager.
+previous                              # [Alias] Skip to previous song.
+ps                                    # Snapshot of current processes.
+pwd                                   # Print working directory.
+python                                # Python CLI.
+redshift                              # [Package] Blue light filter.
+reload                                # Source .zshrc file.
+restart                               # Restart machine.
+rm                                    # Delete file.
+rmdir                                 # Delete directory.
+scp                                   # OpenSSH secure file copy.
+shutown                               # Power off machine.
+song                                  # [Alias] Display currently playing song.
+ss                                    # Investigate sockets.
+ssh                                   # OpenSSH remote login client.
+sort                                  # Sorts line of file.
+su                                    # Execute command with substitute user.
+sudo                                  # Execute command as superuser.
+tail                                  # Print last N lines of file.
+tar                                   # Create tar archive.
+time                                  # Record command execution time.
+todo                                  # Open ToDo list in vim.
+top                                   # Display Linux processes.
+touch                                 # Create empty file.
+uniq                                  # Filter out duplicate lines.
+unpause                               # [Alias] Unpause song.
+untar                                 # [Alias] Extract tar archive.
+unzip                                 # Extract zip archive.
+vim                                   # Text editor.
+wc                                    # Print newline/word/byte count.
+wget                                  # Downloads file.
+whatis                                # Display one-line man page.
+whereis                               # Locate entity.
+which                                 # Shows full path of command.
+youtube-audio                         # [Alias] Download YouTube audio.
+youtube-dl                            # [Package] Download YouTube video.
+youtube-metadata                      # [Alias] Print YouTube video metadata.
+zip                                   # Create a zip archive.

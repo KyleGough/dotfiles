@@ -1,3 +1,11 @@
+ZSH SHELL
+------------------------------
+CTRL+L:        CLEAR TERMINAL
+CTRL+U:        DELETE BEFORE CURSOR
+CTRL+K:        DELETE AFTER CURSOR
+CTRL+Z:        TOGGLE VIM
+ESC+ESC:       ADD SUDO TO COMMAND
+
 i3 APPLICATION SHORTCUTS
 ------------------------------
 F2:            Firefox
@@ -13,3 +21,16 @@ SHIFT+RIGHT:   NEXT TAB
 CONTROL+D:     CLOSE TAB
 CONTROL+LEFT:  MOVE TAB LEFT
 CONTROL+RIGHT: MOVE TAB RIGHT
+
+
+
+
+
+
+
+
+
+OTHER
+------------------------------
+CTRL+Z - Suspends current process.
+fg     - Reloads suspended process.

@@ -23,10 +23,15 @@ git config --global user.email "example@abc.com"
 sudo pacman -Syu
 
 #|----------------------------------------------|#
-#| 5) Configure ZSH Shell as default.           |#
+#| 5) Configure ZSH Shell and ohmyzsh.          |#
 #|----------------------------------------------|#
 sudo pacman -S zsh
 chsh -s /usr/bin/zsh
+cd ~
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # Restart session to apply changes.
 
 #|----------------------------------------------|#
@@ -71,6 +76,7 @@ sudo ./install.sh
 #|----------------------------------------------|#
 #| 10) Load Custom Scripts and Aliases.         |#
 #|----------------------------------------------|#
+
 source ~/.zshrc
 reload
 
