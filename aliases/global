@@ -1,5 +1,8 @@
+#!/usr/bin/zsh
 autoload -U compinit
 compinit
+
+CONFIG_PATH="/home/kyle/Documents/config"
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
@@ -15,13 +18,6 @@ alias sudoku='cd ~/Documents/sudoku'
 alias lucidlab='cd ~/Documents/lucidlab'
 #alias cs413='cd ~/Documents/"cs413: Image and Video"'
 #alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
-
-# Custom Workspaces
-workspace-cs419() {
-  cd ~/Documents/"cs419: Quantum Computing";
-  firefox "https://warwick.ac.uk/fac/sci/dcs/people/tom_gur/quantum2020";
-  typora notes.md&;
-}
 
 # Directories.
 alias ..='cd ..'
@@ -66,8 +62,8 @@ alias docker='sudo docker'
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
 alias fire='aafire -driver curses'
-alias symbols='cat ~/Documents/config/symbols.txt'
-alias editsymbols='vim ~/Documents/config/symbols.txt'
+alias symbols='cat ${CONFIG_PATH}/docs/symbols'
+alias editsymbols='vim ${CONFIG_PATH}/docs/symbols'
 
 # Redshift.
 alias night='redshift -O 4250 &> /dev/null'
@@ -78,10 +74,11 @@ alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'
 
 # Shortcuts (Config).
-alias config='cd ~/Documents/config/'
-alias commands='vim ~/Documents/config/commands'
-alias aliases='vim ~/Documents/config/aliases/global && source ~/.zshrc'
-alias startup='vim ~/Documents/config/startup.py'
+alias config='cd ${CONFIG_PATH}'
+alias commands='vim ${CONFIG_PATH}/docs/commands'
+alias keybinds='cat ${CONFIG_PATH}/docs/keybinds'
+alias aliases='vim ${CONFIG_PATH}/aliases/global && source ~/.zshrc'
+alias startup='vim ${CONFIG_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc'
 alias torrents='cd ~/Downloads/torrents/'
@@ -91,7 +88,6 @@ alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
-alias usb='cd /run/media/kyle/'
 alias home='cd ~/Documents && reload'
 
 # Shutdown.
@@ -108,7 +104,7 @@ alias grep='grep --color=auto'
 alias h='history'
 alias hs='history | grep'
 alias c='clear'
-alias neofetch='neofetch --source /home/kyle/Pictures/ascii/goose.txt'
+alias neofetch='neofetch --source ${CONFIG_PATH}/media/goose.txt'
 alias v='vim'
 
 # Downloads.
