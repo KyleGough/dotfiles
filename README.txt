@@ -75,7 +75,14 @@ source ~/.zshrc
 reload
 
 #|----------------------------------------------|#
-#| 11) Install Applications/Packages.           |#
+#| 11) urxvt Terminal Config.                   |#
+#|----------------------------------------------|#
+rm ~/.Xresources
+ln ~/Documents/config/.Xresources ~/.Xresources
+xrdb ~/.Xresources
+
+#|----------------------------------------------|#
+#| 12) Install Applications/Packages.           |#
 #|----------------------------------------------|#
 
 # Browser.
