@@ -13,37 +13,34 @@ ENABLE_CORRECTION="true"                     # Command auto-correction.
 plugins=(git alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
 # Config Repository Location.
-CONFIG_LOCATION="/home/kyle/Documents/config"
+CONFIG_PATH="/home/kyle/Documents/config"
 
-source $CONFIG_LOCATION/aliases/global       # Custom aliases.
-source $CONFIG_LOCATION/aliases/private      # Custom private aliases.
-source $CONFIG_LOCATION/aliases/suffix       # Custom suffix aliases. 
+source $CONFIG_PATH/aliases/global           # Custom aliases.
+source $CONFIG_PATH/aliases/private          # Custom private aliases.
+source $CONFIG_PATH/aliases/suffix           # Custom suffix aliases. 
 source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 
 #----------------------------------------------------------------------------------#
 #                              Custom Startup Display.                             # 
 #----------------------------------------------------------------------------------#
 
-# Prints the ASCII art for my name.
-#cat ~/Pictures/ascii/name.txt"
-
 # Displays neofetch.
-neofetch --source $CONFIG_LOCATION/media/goose.txt
+neofetch --source $CONFIG_PATH/media/goose.txt
 
 # Displays useful commands and todo list.
-python $CONFIG_LOCATION/startup.py
+python $CONFIG_PATH/startup.py
 echo ""
 
 # Displays Git repo statuses.
 repos="$(mgitstatus -c --no-upstream ~/Documents)"
 num_repos="$(echo $repos | wc -l)"
 
-
+# Prints Repo List Header.
 esc=$(printf '\033')
 echo "     ${esc}[95mGit Repositories\033[0m (${esc}[94m$num_repos${esc}[0m)"
 echo "     ----------------"
 
-
+# Prints Repositories.
 repos=$(repos | sort | sed -e 's/^\/home\/kyle\/Documents\//     /')
 echo $repos
 echo ""
