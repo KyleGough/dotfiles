@@ -236,6 +236,16 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
 ! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
 
-URxvt.perl-ext-common: tabbed
+! User Customisation.
+URxvt.perl-ext-common: default,tabbed,clipboard,url-select,matcher
 URxvt.tabbed.new-button: false
 URxvt.tabbed.autohide: true
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perlLclipboard:paste
+URxvt.url-launcher: /usr/bin/xdg-open
+Urxvt.underlineURLs: true
+URxvt.matcher.button: 1
+!URxvt.transparent: true
+!URxvt.shading: 40
+!URxvt.blurRadius: 20
