@@ -4,6 +4,7 @@
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH   # Path.
 export ZSH="/home/kyle/.oh-my-zsh"           # Oh My ZSH location. 
+export EDITOR=vim                            # Default Editor.
 ZSH_THEME="agnoster"                         # ZSH Theme.
 HIST_STAMPS="dd.mm.yyyy"                     # History command timestamps.
 COMPLETION_WAITING_DOTS="true"               # Red dots whilst waiting for completion.
