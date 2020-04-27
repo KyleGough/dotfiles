@@ -82,7 +82,15 @@ ln ~/Documents/config/.Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 #|----------------------------------------------|#
-#| 12) Install Applications/Packages.           |#
+#| 12) Redshift.                                |#
+#|----------------------------------------------|#
+sudo pacman -S redshift
+cd ~/.config
+mkdir redshift
+ln ~/Documents/config/redshift.conf ~/.config/redshift/redshift.conf
+
+#|----------------------------------------------|#
+#| 13) Install Applications/Packages.           |#
 #|----------------------------------------------|#
 
 # Browser.

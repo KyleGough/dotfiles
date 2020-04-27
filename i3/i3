@@ -7,6 +7,9 @@ set $mod Mod4
 # Desktop Wallpaper.
 exec --no-startup-id sh ~/.fehbg
 
+# Redshift.
+exec --no-startup-id redshift-gtk
+
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 

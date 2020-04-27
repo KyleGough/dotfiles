@@ -106,6 +106,7 @@ alias hs='history | grep'
 alias c='clear'
 alias neofetch='neofetch --source ${CONFIG_PATH}/media/goose.txt'
 alias v='vim'
+alias urxvt-config='vim ${CONFIG_PATH}/.Xresources && xrdb ${CONFIG_PATH}/.Xresources'
 
 # Downloads.
 alias youtube-audio='youtube-dl -x -f bestaudio'
