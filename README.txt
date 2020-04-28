@@ -76,7 +76,6 @@ sudo ./install.sh
 #|----------------------------------------------|#
 #| 10) Load Custom Scripts and Aliases.         |#
 #|----------------------------------------------|#
-
 source ~/.zshrc
 reload
 
@@ -88,12 +87,18 @@ ln ~/Documents/config/.Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 #|----------------------------------------------|#
+#| 12) Compton.                                 |#
+#|----------------------------------------------|#
+rm ~/.config/compton.conf
+ln compton.conf ~/.config/compton.conf
+
+#|----------------------------------------------|#
 #| 12) Redshift.                                |#
 #|----------------------------------------------|#
 sudo pacman -S redshift
 cd ~/.config
 mkdir redshift
-ln ~/Documents/config/redshift.conf ~/.config/redshift/redshift.conf
+ln redshift.conf ~/.config/redshift/redshift.conf
 
 #|----------------------------------------------|#
 #| 13) Install Applications/Packages.           |#
