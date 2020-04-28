@@ -80,7 +80,7 @@ alias keybinds='cat ${CONFIG_PATH}/docs/keybinds'
 alias aliases='vim ${CONFIG_PATH}/aliases/global && source ~/.zshrc'
 alias startup='vim ${CONFIG_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
-alias zshrc='vim ~/.zshrc'
+alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias torrents='cd ~/Downloads/torrents/'
 
 # Shortcuts (Directories).
