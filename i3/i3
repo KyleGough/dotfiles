@@ -1,6 +1,7 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+
 # Mod key.
 set $mod Mod4
 
@@ -14,7 +15,7 @@ exec --no-startup-id redshift-gtk
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 0
 default_floating_border normal
 
 # Hide Borders.
@@ -434,3 +435,5 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+border_radius 4

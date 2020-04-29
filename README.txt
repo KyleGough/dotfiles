@@ -54,6 +54,8 @@ rm /etc/i3status.conf
 ln i3/i3 ~/.i3/config
 ln i3/i3status.conf /etc/i3status.conf
 pacman -S py3status
+pamac remove manjaro-i3-settings
+pamac build i3-gaps-rounded-git
 # Reload i3 with $mod+SHIFT+R
 
 #|----------------------------------------------|#
