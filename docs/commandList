@@ -26,6 +26,7 @@ head                                  # Print first N lines of file.
 history                               # Command history.
 import                                # Screenshot.
 ip                                    # Print IP.
+jobs                                  # Displays status of current jobs.
 ln                                    # Create soft link.
 ls                                    # List directory contents.
 man                                   # Manual page.            
