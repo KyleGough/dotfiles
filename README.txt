@@ -14,8 +14,7 @@ sudo vim /etc/hostname
 #|----------------------------------------------|#
 #| 3) Configure Git Config.                     |#
 #|----------------------------------------------|#
-git config --global user.name "Kyle Gough"
-git config --global user.email "example@abc.com"
+ln -s .gitconfig ~/.gitconfig
 
 #|----------------------------------------------|#
 #| 4) Update Package Manager.                   |#
@@ -40,19 +39,19 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 cd ~/Documents
 git clone https://www.github.com/KyleGough/config.git
 cd config
-sudo rm ~/.vimrc
+rm ~/.vimrc
 rm ~/.zshrc
-ln .zshrc ~/.zshrc
-ln .vimrc ~/.vimrc
+ln -s .zshrc ~/.zshrc
+ln -s .vimrc ~/.vimrc
 touch ~/Documents/todo
 
 #|----------------------------------------------|#
 #| 7) Apply i3 config files.                    |# 
 #|----------------------------------------------|#
-sudo rm ~/.i3/config
-rm /etc/i3status.conf 
-ln i3/i3 ~/.i3/config
-ln i3/i3status.conf /etc/i3status.conf
+rm ~/.i3/config
+sudo rm /etc/i3status.conf 
+ln -s i3/i3 ~/.i3/config
+ln -s i3/i3status.conf /etc/i3status.conf
 pacman -S py3status
 pamac remove manjaro-i3-settings
 pamac build i3-gaps-rounded-git
@@ -63,7 +62,7 @@ pamac build i3-gaps-rounded-git
 #|----------------------------------------------|#
 sudo pacman -S neofetch
 rm ~/.config/neofetch/config.conf
-ln neofetch.conf ~/.config/neofetch/config.conf
+ln -s neofetch.conf ~/.config/neofetch/config.conf
 
 #|----------------------------------------------|#
 #| 9) mgitstatus.                               |#
@@ -85,14 +84,14 @@ reload
 #| 11) urxvt Terminal Config.                   |#
 #|----------------------------------------------|#
 rm ~/.Xresources
-ln ~/Documents/config/.Xresources ~/.Xresources
+ln -s .Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 #|----------------------------------------------|#
 #| 12) Compton.                                 |#
 #|----------------------------------------------|#
 rm ~/.config/compton.conf
-ln compton.conf ~/.config/compton.conf
+ln -s compton.conf ~/.config/compton.conf
 
 #|----------------------------------------------|#
 #| 12) Redshift.                                |#
@@ -100,7 +99,7 @@ ln compton.conf ~/.config/compton.conf
 sudo pacman -S redshift
 cd ~/.config
 mkdir redshift
-ln redshift.conf ~/.config/redshift/redshift.conf
+ln -s redshift.conf ~/.config/redshift/redshift.conf
 
 #|----------------------------------------------|#
 #| 13) Install Applications/Packages.           |#
