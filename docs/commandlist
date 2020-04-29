@@ -14,6 +14,7 @@ df                                    # Disk space usage.
 du                                    # Estimate file space usage.
 echo                                  # Print.
 extract                               # [ZSH Plugin] Extract archive.
+fc-list                               # Lists all installed fonts.
 find                                  # Search for files.
 git                                   # Git.
 gcc                                   # C and C++ compiler.
