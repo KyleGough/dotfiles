@@ -82,6 +82,7 @@ alias startup='vim ${CONFIG_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias torrents='cd ~/Downloads/torrents/'
+alias command-search='cat ${CONFIG_PATH}/docs/commandList | grep'
 
 # Shortcuts (Directories).
 alias docs='cd ~/Documents'

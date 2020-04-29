@@ -7,6 +7,8 @@ chsh                                  # Shell management.
 chwon                                 # CHange file owenership.
 clear                                 # Clears terminal.
 cloc                                  # Line count.
+commands                              # [Alias] Open commands document in vim.
+command-search                        # [Alias] Search for commands.
 convert                               # Convert image formats.
 cp                                    # Copy file/directory.
 curl                                  # Transfer data.
@@ -15,6 +17,7 @@ du                                    # Estimate file space usage.
 echo                                  # Print.
 extract                               # [ZSH Plugin] Extract archive.
 fc-list                               # Lists all installed fonts.
+fg                                    # Continues a suspended process.
 find                                  # Search for files.
 git                                   # Git.
 gcc                                   # C and C++ compiler.
@@ -59,7 +62,7 @@ sudo                                  # Execute command as superuser.
 tail                                  # Print last N lines of file.
 tar                                   # Create tar archive.
 time                                  # Record command execution time.
-todo                                  # Open ToDo list in vim.
+todo                                  # [Alias] Open Todo list in vim.
 top                                   # Display Linux processes.
 touch                                 # Create empty file.
 uniq                                  # Filter out duplicate lines.
