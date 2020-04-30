@@ -94,7 +94,7 @@ alias home='cd ~/Documents && reload'
 # Shutdown.
 alias shutdown='shutdown -h now'
 alias restart='shutdown -r now'
-alias lock='xdg-screensaver lock'
+alias lock='blurlock'
 
 # Terminal.
 alias l='ls -Alh --color=auto'
@@ -110,8 +110,8 @@ alias v='vim'
 alias urxvt-config='vim ${CONFIG_PATH}/.Xresources && xrdb ${CONFIG_PATH}/.Xresources'
 
 # Downloads.
-alias youtube-audio='youtube-dl -x -f bestaudio'
-alias youtube-metadata='youtube-dl -qse --get-title --get-duration --get-description'
+alias yt-audio='youtube-dl -x -f --no-playlist bestaudio'
+alias yt-metadata='youtube-dl -qse --get-title --get-duration --get-description --no-playlist'
 
 # Web (Uses default browser).
 alias google='xdg-open google.co.uk &'
