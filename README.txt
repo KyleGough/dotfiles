@@ -142,6 +142,7 @@ mkdir ~/Downloads/torrents
 
 # Games.
 pamac build clonehero
+sudo pacman -S desmume
 
 # Virtualization.
 # See: https://wiki.manjaro.org/index.php?title=VirtualBox
