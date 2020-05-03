@@ -61,3 +61,10 @@ cd ~/.config
 mkdir redshift 
 cd ~/Documents/config
 ln redshift.conf ~/.config/redshift/redshift.conf
+
+# Torrents.
+cd ~/Downloads
+mkdir torrents
+
+# Applications.
+sudo apt install ranger
