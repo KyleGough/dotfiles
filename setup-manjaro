@@ -100,6 +100,7 @@ ln -s compton.conf ~/.config/compton.conf
 sudo pacman -S redshift
 cd ~/.config
 mkdir redshift
+cd ~/Documents/config
 ln -s redshift.conf ~/.config/redshift/redshift.conf
 
 #|----------------------------------------------|#

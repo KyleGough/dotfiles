@@ -1,0 +1,63 @@
+# Update and Upgrade system.
+sudo apt update
+sudo apt upgrade
+
+# Install priority packages.
+sudo apt install vim
+sudo apt install git
+sudo apt install curl
+sudo apt install python
+
+# Hostname.
+sudo vim /etc/hostname
+
+# Configure Git.
+git config --global user.name "Kyle Gough"
+git config --global user.email "kylegough98@gmail.com"
+
+# Install zsh.
+sudo apt install zsh
+chsh -s /usr/bin/zsh
+cd ~
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
+git clone https://github.com/djui/alias-tips.git
+# Restart session to apply changes.
+
+# Clone config repository.
+cd ~/Documents
+git clone https://github.com/KyleGough/config.git
+cd config
+ln .zshrc ~/.zshrc
+ln .vimrc ~/.vimrc
+touch aliases/private
+touch ~/Documents/todo
+
+# Vim.
+cd ~/Documents/config
+ln .vimrc ~/.vimrc
+
+# urxvt.
+sudo apt install rxvt-unicode
+ln .Xresources ~/.Xresources
+sudo update-alternatives --config x-terminator-emulator
+
+# Neofetch.
+sudo apt install neofetch
+
+# mgitstatus.
+cd ~
+mkdir .misc
+cd .misc
+git clone https://github.com/fboender/multi-git-status.git
+cd multi-git-status
+sudo ./install.sh
+
+# Redshift.
+sudo apt install redshift
+cd ~/.config
+mkdir redshift 
+cd ~/Documents/config
+ln redshift.conf ~/.config/redshift/redshift.conf
