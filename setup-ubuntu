@@ -7,6 +7,7 @@ sudo apt install vim
 sudo apt install git
 sudo apt install curl
 sudo apt install python
+sudo apt install ranger
 
 # Hostname.
 sudo vim /etc/hostname
@@ -66,5 +67,19 @@ ln redshift.conf ~/.config/redshift/redshift.conf
 cd ~/Downloads
 mkdir torrents
 
-# Applications.
-sudo apt install ranger
+# Visual Studio Code.
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+
+# Python 3.7.
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.7
+sudo mv /usr/bin/python /usr/bin/python.old
+sudo ln -s /usr/bin/python3.7 /usr/bin/python
