@@ -90,6 +90,7 @@ alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
 alias home='cd ~/Documents && reload'
+alias dl='cd ~/Downloads'
 
 # Shutdown.
 alias shutdown='shutdown -h now'

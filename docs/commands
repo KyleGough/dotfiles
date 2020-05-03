@@ -9,6 +9,12 @@ cloc .           # Counts lines in files.
 chsh -l          # List installed shells.
 chsh -s <path>   # Set default shell.
 
+#[dd] Disk copy tool.
+dd bs=4M if=/path/to/manjaro.iso of=/dev/sd[Drive Letter] status=progress oflag=sync
+
+#[fdisk] Outputs disk partitions and external drives.
+fdisk -l         # Lists drives/partitions.
+
 #[compilers]
 gcc -o "<output file>" "<source files>"
 g++ -o "<output file>" "<source files>"

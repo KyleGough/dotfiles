@@ -76,6 +76,7 @@ wget                                  # Downloads file.
 whatis                                # Display one-line man page.
 whereis                               # Locate entity.
 which                                 # Shows full path of command.
+xrandr                                # Display tool.
 youtube-audio                         # [Alias] Download YouTube audio.
 youtube-dl                            # [Package] Download YouTube video.
 youtube-metadata                      # [Alias] Print YouTube video metadata.
