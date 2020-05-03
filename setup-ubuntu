@@ -16,16 +16,17 @@ sudo vim /etc/hostname
 git config --global user.name "Kyle Gough"
 git config --global user.email "kylegough98@gmail.com"
 
-# Install zsh.
+# Install ZSH.
 sudo apt install zsh
 chsh -s /usr/bin/zsh
+
+# Oh My ZSH.
 cd ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
 git clone https://github.com/djui/alias-tips.git
-# Restart session to apply changes.
 
 # Clone config repository.
 cd ~/Documents
@@ -83,3 +84,6 @@ sudo apt update
 sudo apt install python3.7
 sudo mv /usr/bin/python /usr/bin/python.old
 sudo ln -s /usr/bin/python3.7 /usr/bin/python
+
+# Lock screen.
+sudo apt install gnome-screensaver
