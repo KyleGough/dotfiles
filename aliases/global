@@ -130,7 +130,7 @@ upload() {
 lock() {
   if [ $DISTRO_ID = 'Ubuntu' ]; then
     gnome-screensaver-command -l
-  elif [ $DISTRO_ID = 'Manjaro' ]; then
+  elif [ $DISTRO_ID = 'ManjaroLinux' ]; then
     blurlock
   else
     echo "No lock command for distribution."
