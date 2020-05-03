@@ -3,6 +3,7 @@ autoload -U compinit
 compinit
 
 CONFIG_PATH="/home/kyle/Documents/config"
+DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
@@ -10,14 +11,7 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Current Projects
 alias sudoku='cd ~/Documents/sudoku'
-#alias portfolio='cd ~/Documents/portfolio'
-#alias cs910='cd ~/Documents/cs910/cw'
-#alias cs904='cd ~/Documents/"cs904: Computational Biology"'
-#alias cs910='cd ~/Documents/"cs910: Data Analytics"'
-#alias cs402='cd ~/Documents/"cs402: High Performance Computing"'
 alias lucidlab='cd ~/Documents/lucidlab'
-#alias cs413='cd ~/Documents/"cs413: Image and Video"'
-#alias cs419='cd ~/Documents/"cs419: Quantum Computing"'
 
 # Directories.
 alias ..='cd ..'
@@ -37,11 +31,7 @@ alias cl='clear && ls -al'
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
 alias diff='git diff'
 alias repos='mgitstatus -c --no-upstream ~/Documents'
-
-upload() {
-  branchName=$(git branch --show-current)
-  git add . && git commit -m $1 && git push origin $branchName
-}
+alias status='git status'
 
 # Media Controller.
 alias song='playerctl metadata --format "Now playing: {{ artist }} - {{ album }} - {{ title }}"'
@@ -50,14 +40,14 @@ alias previous='playerctl previous && sleep 1 && song'
 alias pause='playerctl pause'
 alias unpause='playerctl play'
 
-# Network.
+# Information.
 alias ip='curl icanhazip.com'
+alias distro='cat /etc/*-release'
 
 # Packages.
 alias pac='sudo pacman'
-alias apt-get='sudo apt-get'
+alias apt='sudo apt'
 alias pip='sudo pip'
-alias docker='sudo docker'
 
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
@@ -72,6 +62,8 @@ alias day='redshift -x &> /dev/null'
 # Security.
 alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'
+alias clear-history-bash='cat /dev/null > ~/.bash_history && history -c && exit'
+alias clear-history-zsh='cat dev/null > ~/.zsh_history && history -c && exit'
 
 # Shortcuts (Config).
 alias config='cd ${CONFIG_PATH}'
@@ -89,13 +81,12 @@ alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
-alias home='cd ~/Documents && reload'
+alias home='clear && cd ~/Documents'
 alias dl='cd ~/Downloads'
 
 # Shutdown.
 alias shutdown='shutdown -h now'
 alias restart='shutdown -r now'
-alias lock='blurlock'
 
 # Terminal.
 alias l='ls -Alh --color=auto'
@@ -126,3 +117,22 @@ alias gdocs='xdg-open https://docs.google.com/document/u/0/ &'
 
 # DON'T FORGET TO RELOAD. Config should automatically reload when this file is closed.
 alias reload='clear && source ~/.zshrc'
+
+
+
+# Git - Adds untracked files, pushes and commits them.
+upload() {
+  branchName=$(git branch --show-current)
+  git add . && git commit -m $1 && git push origin $branchName
+}
+
+# Locks the screen according to the Linux distribution.
+lock() {
+  if [ $DISTRO_ID = 'Ubuntu' ]; then
+    gnome-screensaver-command -l
+  elif [ $DISTRO_ID = 'Manjaro' ]; then
+    blurlock
+  else
+    echo "No lock command for distribution."
+  fi
+}

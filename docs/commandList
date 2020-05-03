@@ -12,6 +12,7 @@ command-search                        # [Alias] Search for commands.
 convert                               # Convert image formats.
 cp                                    # Copy file/directory.
 curl                                  # Transfer data.
+d                                     # List last used directories.
 df                                    # Disk space usage.
 du                                    # Estimate file space usage.
 echo                                  # Print.
@@ -81,3 +82,4 @@ youtube-audio                         # [Alias] Download YouTube audio.
 youtube-dl                            # [Package] Download YouTube video.
 youtube-metadata                      # [Alias] Print YouTube video metadata.
 zip                                   # Create a zip archive.
+zsh_stats                             # Lists top 20 commands.
