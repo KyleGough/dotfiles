@@ -1,3 +1,6 @@
+# Personal Ubuntu Post-Installation Setup.
+# Created by Kyle Gough.
+
 # Update and Upgrade system.
 sudo apt update
 sudo apt upgrade
@@ -9,7 +12,7 @@ sudo apt install curl
 sudo apt install python
 sudo apt install ranger
 
-# Hostname.
+# Change Hostname.
 sudo vim /etc/hostname
 
 # Configure Git.
