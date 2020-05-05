@@ -9,22 +9,15 @@ cloc .           # Counts lines in files.
 chsh -l          # List installed shells.
 chsh -s <path>   # Set default shell.
 
-#[dd] Disk copy tool.
-dd bs=4M if=/path/to/manjaro.iso of=/dev/sd[Drive Letter] status=progress oflag=sync
-
-#[fdisk] Outputs disk partitions and external drives.
-fdisk -l         # Lists drives/partitions.
-
-#[compilers]
-gcc -o "<output file>" "<source files>"
-g++ -o "<output file>" "<source files>"
-
 #[convert] - Converts Image formats.
 convert "<original>" "<new>"         # Converts one file to another format.
 convert "<file>".bmp "<file>".png    # Converts bmp file to png.
 
 #[curl] - Tests application's endpoint.
 curl -I -s "<app>":"<port>"
+
+#[dd] Disk copy tool.
+dd bs=4M if=/path/to/manjaro.iso of=/dev/sd[Drive Letter] status=progress oflag=sync
 
 #[df] - Disk usage.
 df -ah                               # Get dsk usage of main directories.
@@ -46,6 +39,12 @@ docker container rm "<containerID>"  # Deletes a container.
 #[du] - Disk usage for a file.
 du -sh                               # View disk space used by a file.
 
+#[grep] - REGEX matching.
+egrep -v '^(;|#|//)'        # Shows a file, ignoring comments.
+
+#[fdisk] Outputs disk partitions and external drives.
+fdisk -l         # Lists drives/partitions.
+
 #[feh] - Image tool.
 feh "<image file">                   # Views an image file.
 feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
@@ -53,6 +52,10 @@ feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
 #[find] - Searches for files. 
 find .name '*.py' | xargs wc -l      # Counts the number of lines in each .py file.
 find ~/Documents -name '.git'        # Displays all git repos.
+
+#[compilers]
+gcc -o "<output file>" "<source files>"
+g++ -o "<output file>" "<source files>"
 
 #[git] - Repositories.
 git config --global user.name "<name>"
@@ -68,9 +71,6 @@ git pull origin "<branch>"
 git branch "<branch>"                # Create branch.
 git checkout "<branch>"              # Switch to branch,
 git rev-list --all --count           # Display commit count.
-
-#[grep] - REGEX matching.
-egrep -v '^(;|#|//)'        # Shows a file, ignoring comments.
 
 #[import] - Screenshot.
 import "<filename>"         # Takes a screenshot of a defined region.
@@ -170,12 +170,10 @@ scala         :quit
 #[Files] - Config and documentation files.
 ~/.bashrc
 ~/.zshrc
-~/.startup.py
+~/.vimrc
 /etc/hostname
 ~/.config/neofetch/config.conf
 /etc/systemd/logind.conf
-~/.config/i3/config
-/etc/i3status.conf
 
 #[IO] - Redirecting Input and Output.
 &>/dev/null    # Redirects all output to /dev/null
