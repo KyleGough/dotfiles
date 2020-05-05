@@ -102,7 +102,7 @@ alias v='vim'
 alias urxvt-config='vim ${CONFIG_PATH}/.Xresources && xrdb ${CONFIG_PATH}/.Xresources'
 
 # Downloads.
-alias yt-audio='youtube-dl -x -f --no-playlist bestaudio'
+alias yt-audio='youtube-dl -x -f bestaudio --no-playlist'
 alias yt-metadata='youtube-dl -qse --get-title --get-duration --get-description --no-playlist'
 
 # Web (Uses default browser).

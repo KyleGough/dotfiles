@@ -131,6 +131,7 @@ pamac build drawio-desktop
 sudo pacman -S playerctl
 sudo pacman -S pulseaudio
 pamac build spotify
+sudo pacman -S audacity
 
 # Passwords
 sudo pacman -S keepassxc
