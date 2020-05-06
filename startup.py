@@ -14,7 +14,14 @@ def todo():
     home = str(Path.home())
     print()
     print()
-    count = len(open(home +"/Documents/todo", "r").readlines())
+    # Counts number of lines without comments.
+    count = 0
+    lines = open(home + "/Documents/todo", "r").readlines()
+    for line in lines:
+      if len(line) > 0:
+        if line[0] != "#":
+          count += 1
+
     # Prints header and number of items.
     print("     " + header("Todo") + " (" + okblue(str(count)) + ")")
     f = open(home + "/Documents/todo", "r")
