@@ -75,6 +75,7 @@ alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias torrents='cd ~/Downloads/torrents/'
 alias command-search='cat ${CONFIG_PATH}/docs/commandList | grep'
+alias goals='vim ~/Documents/goals'
 
 # Shortcuts (Directories).
 alias docs='cd ~/Documents'
