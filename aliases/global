@@ -4,6 +4,7 @@ compinit
 
 CONFIG_PATH="/home/kyle/Documents/config"
 DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
+UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
@@ -28,8 +29,8 @@ alias untar='tar -xvf'
 alias cl='clear && ls -al'
 
 # Disks.
-alias mount-ubuntu='sudo mount /dev/nvme0n1p4 /mnt-ubuntu && cd /mnt-ubuntu'
-alias unmount-ubuntu='sudo umount /dev/nvme0n1p4'
+alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-ubuntu'
+alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
