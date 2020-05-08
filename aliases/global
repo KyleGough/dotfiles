@@ -27,6 +27,10 @@ alias ln='ln -i'
 alias untar='tar -xvf'
 alias cl='clear && ls -al'
 
+# Disks.
+alias mount-ubuntu='sudo mount /dev/nvme0n1p4 /mnt-ubuntu && cd /mnt-ubuntu'
+alias unmount-ubuntu='sudo umount /dev/nvme0n1p4'
+
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
 alias diff='git diff'
