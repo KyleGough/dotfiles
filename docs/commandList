@@ -31,6 +31,7 @@ jobs                                  # Displays status of current jobs.
 ln                                    # Create soft link.
 ls                                    # List directory contents.
 man                                   # Manual page.            
+md5sum                                # Get MD5 hash of file.
 mgitstatus                            # [Repo] Repository status.                   
 mkdir                                 # Create directory.
 mv                                    # Move file/directory.
@@ -54,6 +55,8 @@ restart                               # Restart machine.
 rm                                    # Delete file.
 rmdir                                 # Delete directory.
 scp                                   # OpenSSH secure file copy.
+sha1sum                               # Get SHA1 hash of file.
+sha256sum                             # Get SHA256 hash of file.
 shutown                               # Power off machine.
 song                                  # [Alias] Display currently playing song.
 ss                                    # Investigate sockets.
