@@ -35,6 +35,7 @@ md5sum                                # Get MD5 hash of file.
 mgitstatus                            # [Repo] Repository status.                   
 mkdir                                 # Create directory.
 mv                                    # Move file/directory.
+ncdu                                  # Find disk space usage stats.
 next                                  # [Alias] Skip to next song.
 nmtui                                 # GUI network manager.
 npm                                   # Node.js package manager.
