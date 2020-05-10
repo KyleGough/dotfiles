@@ -2,9 +2,12 @@
 autoload -U compinit
 compinit
 
+
 CONFIG_PATH="/home/kyle/Documents/config"
 DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
 UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
+MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
+
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
@@ -27,6 +30,7 @@ alias cp='cp -i'
 alias ln='ln -i'
 alias untar='tar -xvf'
 alias cl='clear && ls -al'
+alias dush='du -sh -- *'
 
 # Disks.
 alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-ubuntu'
