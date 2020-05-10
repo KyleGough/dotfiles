@@ -18,6 +18,7 @@ alias sudoku='cd ~/Documents/sudoku'
 alias lucidlab='cd ~/Documents/lucidlab'
 
 # Directories.
+alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
