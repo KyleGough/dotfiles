@@ -148,3 +148,27 @@ sudo pacman -S desmume
 
 # Virtualization.
 # See: https://wiki.manjaro.org/index.php?title=VirtualBox
+
+#|----------------------------------------------|#
+#| 14) LAMP.                                    |#
+#|----------------------------------------------|#
+
+# See: https://forum.manjaro.org/t/install-apache-mariadb-php-lamp-2016/1243
+
+sudo pacman -S apache
+# Uncomment out line {LoadModule unique_id_module modules/mod_unique_id.so}
+sudo vim /etc/httpd/conf/httpd.conf
+sudo systemctl enable httpd
+sudo systemctl restart httpd
+sudo systemctl status httpd
+# Create dummy index page.
+sudo vim /srv/https/index.html
+sudo pacman -S php php-apache
+sudo vim /etc/httpd/conf/httpd.conf
+# Uncomment out line {LoadModule mpm_prefork_module modules/mod_mpm_prefork.so}
+# Add lines to bottom of file:
+# {LoadModule php7_module modules/libphp7.so}
+# {AddHandler php7-script php}
+# {Include conf/extra/php7_module.conf}
+sudo systemctl restart httpd
+

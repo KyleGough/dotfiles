@@ -16,6 +16,7 @@ alias pbpaste='xclip -selection clipboard -o'
 # Current Projects
 alias sudoku='cd ~/Documents/sudoku'
 alias lucidlab='cd ~/Documents/lucidlab'
+alias portfolio='cd /srv/http'
 
 # Directories.
 alias .='pwd'
@@ -73,7 +74,7 @@ alias day='redshift -x &> /dev/null'
 alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'
 alias clear-history-bash='cat /dev/null > ~/.bash_history && history -c && exit'
-alias clear-history-zsh='cat dev/null > ~/.zsh_history && history -c && exit'
+alias clear-history-zsh='cat /dev/null > ~/.zsh_history && history -c && exit'
 
 # Shortcuts (Config).
 alias config='cd ${CONFIG_PATH}'
