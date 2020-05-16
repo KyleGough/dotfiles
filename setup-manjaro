@@ -172,3 +172,8 @@ sudo vim /etc/httpd/conf/httpd.conf
 # {Include conf/extra/php7_module.conf}
 sudo systemctl restart httpd
 
+# Download and replace with Portfolio.
+cd /srv
+sudo git clone https://github.com/KyleGough/portfolio.git
+sudo rm -rf http
+sudo mv portfolio http
