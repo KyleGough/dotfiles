@@ -100,6 +100,9 @@ alias dl='cd ~/Downloads'
 alias shutdown='shutdown -h now'
 alias restart='shutdown -r now'
 
+# Templates.
+alias template-scala='cp -i ${CONFIG_PATH}/templates/scala.scala'
+
 # Terminal.
 alias l='ls -Alh --color=auto'
 alias ll='ls -Alh --color=auto'
