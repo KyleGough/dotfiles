@@ -7,6 +7,8 @@ CONFIG_PATH="/home/kyle/Documents/config"
 DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
 UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
 MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
+FOLDER_HIDDEN="/home/kyle/Downloads/.other"
+FOLDER_SHOWN="/home/kyle/Downloads/other"
 
 
 # Clipboard.
@@ -75,6 +77,8 @@ alias password='openssl rand -base64 20'
 alias sha='shasum -a 256'
 alias clear-history-bash='cat /dev/null > ~/.bash_history && history -c && exit'
 alias clear-history-zsh='cat /dev/null > ~/.zsh_history && history -c && exit'
+alias other-open='encfs ${FOLDER_HIDDEN} ${FOLDER_SHOWN}'
+alias other-close='fusermount -u ${FOLDER_SHOWN}'
 
 # Shortcuts (Config).
 alias config='cd ${CONFIG_PATH}'

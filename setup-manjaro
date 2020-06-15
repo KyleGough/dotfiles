@@ -146,6 +146,9 @@ mkdir ~/Downloads/torrents
 pamac build clonehero
 sudo pacman -S desmume
 
+# Protected Files.
+pamac install encfs
+
 # Virtualization.
 # See: https://wiki.manjaro.org/index.php?title=VirtualBox
 
