@@ -4,7 +4,7 @@ cd                                    # Change directory.
 chgrp                                 # Change file group.
 chmod                                 # Change file permissions.
 chsh                                  # Shell management.
-chwon                                 # CHange file owenership.
+chwon                                 # Change file owenership.
 clear                                 # Clears terminal.
 cloc                                  # Line count.
 commands                              # [Alias] Open commands document in vim.
