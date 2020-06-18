@@ -52,6 +52,7 @@ alias next='playerctl next && sleep 1 && song'
 alias previous='playerctl previous && sleep 1 && song'
 alias pause='playerctl pause'
 alias unpause='playerctl play'
+alias slideshow='feh --scale-down -xzrZD'
 
 # Information.
 alias ip='curl icanhazip.com'
