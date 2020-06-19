@@ -7,8 +7,8 @@ CONFIG_PATH="/home/kyle/Documents/config"
 DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
 UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
 MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
-FOLDER_HIDDEN="/home/kyle/Downloads/.other"
-FOLDER_SHOWN="/home/kyle/Downloads/other"
+FOLDER_HIDDEN="/home/kyle/.other"
+FOLDER_SHOWN="/home/kyle/other"
 
 
 # Clipboard.
@@ -80,6 +80,7 @@ alias clear-history-bash='cat /dev/null > ~/.bash_history && history -c && exit'
 alias clear-history-zsh='cat /dev/null > ~/.zsh_history && history -c && exit'
 alias other-open='encfs ${FOLDER_HIDDEN} ${FOLDER_SHOWN}'
 alias other-close='fusermount -u ${FOLDER_SHOWN}'
+alias purge='clear && clear-history-zsh'
 
 # Shortcuts (Config).
 alias config='cd ${CONFIG_PATH}'
@@ -89,7 +90,6 @@ alias aliases='vim ${CONFIG_PATH}/aliases/global && source ~/.zshrc'
 alias startup='vim ${CONFIG_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
-alias torrents='cd ~/Downloads/torrents/'
 alias command-search='cat ${CONFIG_PATH}/docs/commandList | grep'
 alias goals='vim ~/Documents/goals'
 
@@ -100,6 +100,7 @@ alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
 alias home='clear && cd ~/Documents'
 alias dl='cd ~/Downloads'
+alias torrents='cd ~/Downloads/torrents/'
 
 # Shutdown.
 alias shutdown='shutdown -h now'
