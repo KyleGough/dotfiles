@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
-autoload -U compinit
-compinit
+#autoload -U compinit
+#compinit
 
 
 CONFIG_PATH="/home/kyle/Documents/config"
@@ -53,6 +53,7 @@ alias previous='playerctl previous && sleep 1 && song'
 alias pause='playerctl pause'
 alias unpause='playerctl play'
 alias slideshow='feh --scale-down -xzrZD'
+alias background='feh --bg-fill'
 
 # Information.
 alias ip='curl icanhazip.com'
