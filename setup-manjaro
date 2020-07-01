@@ -55,6 +55,7 @@ touch aliases/private
 rm ~/.i3/config
 sudo rm /etc/i3status.conf 
 ln i3/i3 ~/.i3/config
+ln i3/i3 ~/.config/i3/config
 sudo ln i3/i3status.conf /etc/i3status.conf
 sudo pacman -S py3status
 pamac remove manjaro-i3-settings
