@@ -123,24 +123,27 @@ sudo pacman -S deepin-screenshot
 # Notes.
 pamac build simplenote-electron-bin
 
-# Fancy Terminal
+# Fancy Terminal.
 sudo pacman -S cool-retro-term
 
-# Developer Tools
+# Developer Tools.
 sudo pacman -S code
 sudo pip install pipenv
 pamac build drawio-desktop
 
-# Audio
+# Audio.
 sudo pacman -S playerctl
 sudo pacman -S pulseaudio
 pamac build spotify
 sudo pacman -S audacity
 
-# Passwords
+# Passwords.
 sudo pacman -S keepassxc
 
-# Torrenting/Downloading
+# Visual.
+sudo pacman -S feh
+
+# Downloads.
 sudo pacman -S ffmpeg
 sudo pacman -S youtube-dl
 sudo pacman -S qbittorrent
