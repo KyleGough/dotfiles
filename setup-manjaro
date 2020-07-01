@@ -14,12 +14,14 @@ sudo vim /etc/hostname
 #|----------------------------------------------|#
 #| 3) Configure Git Config.                     |#
 #|----------------------------------------------|#
+git config --global user.name "name"
+git config --global user.email "email"
 ln -s .gitconfig ~/.gitconfig
 
 #|----------------------------------------------|#
 #| 4) Update Package Manager.                   |#
 #|----------------------------------------------|#
-sudo pacman -Syu
+sudo pacman -Syuu
 
 #|----------------------------------------------|#
 #| 5) Configure ZSH Shell and ohmyzsh.          |#
@@ -45,6 +47,7 @@ rm ~/.zshrc
 ln -s .zshrc ~/.zshrc
 ln -s .vimrc ~/.vimrc
 touch ~/Documents/todo
+touch aliases/private
 
 #|----------------------------------------------|#
 #| 7) Apply i3 config files.                    |# 
@@ -52,8 +55,8 @@ touch ~/Documents/todo
 rm ~/.i3/config
 sudo rm /etc/i3status.conf 
 ln -s i3/i3 ~/.i3/config
-ln -s i3/i3status.conf /etc/i3status.conf
-pacman -S py3status
+sudo ln -s i3/i3status.conf /etc/i3status.conf
+sudo pacman -S py3status
 pamac remove manjaro-i3-settings
 pamac build i3-gaps-rounded-git
 # Reload i3 with $mod+SHIFT+R
