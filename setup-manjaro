@@ -148,6 +148,7 @@ sudo pacman -S ffmpeg
 sudo pacman -S youtube-dl
 sudo pacman -S qbittorrent
 mkdir ~/Downloads/torrents
+sudo pacman -S unrar
 
 # Games.
 pamac build clonehero

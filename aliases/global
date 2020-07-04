@@ -39,6 +39,8 @@ alias dush='du -sh -- *'
 # Disks.
 alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-ubuntu'
 alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
+alias mount-usb='sudo mount /dev/sda1 ~/Downloads/mnt'
+alias umount-usb='sudo umount /dev/sda1'
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
