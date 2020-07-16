@@ -180,4 +180,14 @@ gpg-decrypt() {
   echo "File decrypted at: $(pwd)/$1"
 }
 
+# Purge all VLC processes.
+vlc-purge() {
+  for i in $(ps -e | grep vlc | sed "s/^[ \t]*//" | cut -d ' ' -f 1)
+  do
+    kill -9 $i
+    echo "Killed process ${i}."
+  done
+}
+
+
 
