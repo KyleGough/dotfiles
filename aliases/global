@@ -147,7 +147,7 @@ alias gdocs='xdg-open https://docs.google.com/document/u/0/ &'
 # DON'T FORGET TO RELOAD. Config should automatically reload when this file is closed.
 alias reload='clear && source ~/.zshrc'
 
-
+# ----------------------------------------------------------------------------------------------- #
 
 # Git - Adds untracked files, pushes and commits them.
 upload() {
@@ -162,7 +162,7 @@ lock() {
   elif [ $DISTRO_ID = 'ManjaroLinux' ]; then
     blurlock
   else
-    echo "No lock command for distribution."
+    echo "==> No lock command for distribution"
   fi
 }
 
@@ -177,7 +177,7 @@ gpg-encrypt() {
 gpg-decrypt() {
   oldFile="$1.gpg"
   gpg --output $1 --decrypt $oldFile
-  echo "File decrypted at: $(pwd)/$1"
+  echo "==> File decrypted at $(pwd)/$1"
 }
 
 # Purge all VLC processes.
@@ -185,9 +185,8 @@ vlc-purge() {
   for i in $(ps -e | grep vlc | sed "s/^[ \t]*//" | cut -d ' ' -f 1)
   do
     kill -9 $i
-    echo "Killed process ${i}."
+    echo "==> Killed process ${i}"
+    return 0
   done
+  echo "==> No processes found"
 }
-
-
-
