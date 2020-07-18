@@ -9,7 +9,6 @@ UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
 MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
 FOLDER_HIDDEN="/home/kyle/.other"
 FOLDER_SHOWN="/home/kyle/other"
-
 EMAIL="kylegough98@gmail.com"
 GPG_EMAIL="${EMAIL}"
 
