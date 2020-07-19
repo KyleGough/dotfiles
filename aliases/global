@@ -185,7 +185,7 @@ vlc-purge() {
   do
     kill -9 $i
     echo "==> Killed process ${i}"
+    vlc-purge()
     return 0
   done
-  echo "==> No processes found"
 }
