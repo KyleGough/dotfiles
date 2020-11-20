@@ -133,6 +133,9 @@ alias yt-audio='youtube-dl -x -f bestaudio --no-playlist'
 alias yt-metadata='youtube-dl -qse --get-title --get-duration --get-description --no-playlist'
 alias yt-external='youtube-dl --external-downloader axel --external-downloader-args "-n 10 -a"'
 
+# Videos.
+alias res='ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0'
+
 # Web (Uses default browser).
 alias google='xdg-open google.co.uk &'
 alias youtube='xdg-open youtube.co.uk &'
