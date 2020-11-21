@@ -44,6 +44,7 @@ alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-u
 alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
 alias mount-usb='sudo mount /dev/sda1 ~/Downloads/mnt'
 alias umount-usb='sudo umount /dev/sda1'
+alias dfl="df -h --output=source,used,size,target | grep ^'/dev/' | grep -v '/boot/' | awk 'BEGIN { OFS=\"\t\" } {print \$1, FS, \$2 \" / \" \$3}'"
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
