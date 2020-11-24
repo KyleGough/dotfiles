@@ -116,6 +116,7 @@ alias restart='shutdown -r now'
 
 # Statistics.
 alias count-files='find . -type f | wc -l'
+alias find-dupes='find . -type f -exec md5sum "{}" ";" | sort | uniq -all-repeated=separate -w 15 > dupes.txt'
 
 # Templates.
 alias template-scala='cp -i ${CONFIG_PATH}/templates/scala.scala'
