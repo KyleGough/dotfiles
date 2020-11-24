@@ -45,6 +45,7 @@ alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
 alias mount-usb='sudo mount /dev/sda1 ~/Downloads/mnt'
 alias umount-usb='sudo umount /dev/sda1'
 alias dfl="df -h --output=source,used,size,target | grep ^'/dev/' | grep -v '/boot/' | awk 'BEGIN { OFS=\"\t\" } {print \$1, FS, \$2 \" / \" \$3}'"
+alias mnt="cd ~/Downloads/mnt/"
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
@@ -112,6 +113,9 @@ alias torrents='cd ~/Downloads/torrents/'
 # Shutdown.
 alias shutdown='shutdown -h now'
 alias restart='shutdown -r now'
+
+# Statistics.
+alias count-files='find . -type f | wc -l'
 
 # Templates.
 alias template-scala='cp -i ${CONFIG_PATH}/templates/scala.scala'
@@ -197,9 +201,9 @@ vlc-purge() {
 # Batch rename all files in a directory.
 batch-rename() {
   if [ $# -eq 1 ]; then
-    ls -1prt | grep -v "/$" | cat -n | while read n f; do mv -ni "${f}" "$(printf "%s - %03d" $1 $n).${f#*.}"; done 
+    ls -1p | grep -v "/$" | cat -n | while read n f; do mv -ni "${f}" "$(printf "%s - %03d" $1 $n).${f#*.}"; done 
   elif [ $# -eq 2 ]; then
-    ls -1prt | grep ^"$1" | cat -n | while read n f; do mv -ni "${f}" "$(printf "%s - %03d" $2 $n).${f#*.}"; done
+    ls -1p | grep -v "/$" | grep ^"$1" | cat -n | while read n f; do mv -ni "${f}" "$(printf "%s - %03d" $2 $n).${f#*.}"; done
   fi
 }
 
