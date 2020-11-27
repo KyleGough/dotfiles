@@ -1,4 +1,5 @@
 :rename new_file_name.txt      # Renames the selected file.
+:bulkrename                    # Bulk renames selected files.
 :search file_name              # Searches for a file.
 :set show_hidden!              # Toggle hidden files.
 

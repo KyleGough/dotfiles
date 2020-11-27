@@ -138,6 +138,7 @@ alias urxvt-config='vim ${CONFIG_PATH}/.Xresources && xrdb ${CONFIG_PATH}/.Xreso
 alias yt-audio='youtube-dl -x -f bestaudio --no-playlist'
 alias yt-metadata='youtube-dl -qse --get-title --get-duration --get-description --no-playlist'
 alias yt-external='youtube-dl --external-downloader axel --external-downloader-args "-n 10 -a"'
+alias yt-video='youtube-dl -f best --no-playlist'
 
 # Videos.
 alias res='ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0'
