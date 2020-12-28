@@ -71,6 +71,10 @@ alias pac='sudo pacman'
 alias apt='sudo apt'
 alias pip='sudo pip'
 
+# Picture editing.
+alias montage-row-auto='montage-row "*.png" "cover.png"'
+alias montage-quad-auto='montage-quad "*.png" "cover.png"'
+
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
 alias fire='aafire -driver curses'
