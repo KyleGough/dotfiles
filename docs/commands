@@ -49,6 +49,10 @@ fdisk -l         # Lists drives/partitions.
 feh "<image file">                   # Views an image file.
 feh --bg-scale "<image file>"        # Sets the desktop wallpaper.
 
+#[ffmpeg] - Video tool.
+ffmpeg -i "input.mp4" -ss 00:02:30 -to 00:14:33 -c copy -avoid_negative_ts make_zero "output.mp4"
+ffmpeg -i "input.mp4" -i "cover.png" -map 1 -map 0 -acodec copy -vcodec copy "output.mp4"
+
 #[find] - Searches for files. 
 find .name '*.py' | xargs wc -l      # Counts the number of lines in each .py file.
 find ~/Documents -name '.git'        # Displays all git repos.
