@@ -254,3 +254,8 @@ set-thumbnail() {
   mv -i "$1" "old-$1"
   mv -i "tmp-thumbnail-video.mp4" "$1"
 }
+
+# Cut videos with ffmpeg.
+ffmpeg-cut() {
+  ffmpeg -i "$1" -ss "$2" -to "$3" -c copy -avoid_negative_ts make_zero "$4"
+}
