@@ -259,3 +259,11 @@ set-thumbnail() {
 ffmpeg-cut() {
   ffmpeg -i "$1" -ss "$2" -to "$3" -c copy -avoid_negative_ts make_zero "$4"
 }
+
+total-duration() {
+  total=$(find $1 -maxdepth $2 -iname "*.mp4" -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc)
+  h=$(bc <<< "${total}/3600")
+  m=$(bc <<< "(${total}%3600)/60")
+  s=$(bc <<< "${total}%60")
+  printf "%02d:%02d:%02d\n" $h $m $s
+}
