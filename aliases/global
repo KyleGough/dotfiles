@@ -13,6 +13,10 @@ EMAIL="kylegough98@gmail.com"
 GPG_EMAIL="${EMAIL}"
 
 
+# Custom functions.
+source $CONFIG_PATH/aliases/rng.sh
+
+
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -260,8 +264,15 @@ ffmpeg-cut() {
   ffmpeg -i "$1" -ss "$2" -to "$3" -c copy -avoid_negative_ts make_zero "$4"
 }
 
+# Finds the total duration of all videos in the given directory up to a given depth.
 total-duration() {
-  total=$(find $1 -maxdepth $2 -iname "*.mp4" -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc)
+  if [[ $# -eq 1 ]]; then
+    depth=1
+  elif [[ $# -eq 2 ]]; then
+    depth=$2
+  fi
+
+  total=$(find $1 -maxdepth $depth -iname "*.mp4" -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc)
   h=$(bc <<< "${total}/3600")
   m=$(bc <<< "(${total}%3600)/60")
   s=$(bc <<< "${total}%60")
