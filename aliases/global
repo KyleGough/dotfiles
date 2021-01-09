@@ -14,7 +14,8 @@ GPG_EMAIL="${EMAIL}"
 
 
 # Custom functions.
-source $CONFIG_PATH/aliases/rng.sh
+source $CONFIG_PATH/aliases/scripts/rng.sh
+source $CONFIG_PATH/aliases/scripts/video.sh
 
 
 # Clipboard.
@@ -250,31 +251,4 @@ montage-row() {
 # Montage collection of images into a 2x2 grid.
 montage-quad() {
   montage -tile 2x2 -frame 0 -border 0 -geometry "-0+0" "$1" "$2"
-}
-
-# Sets the thumbnail of the video.
-set-thumbnail() {
-  ffmpeg -i "$1" -i "$2" -map 1 -map 0 -acodec copy -vcodec copy "tmp-thumbnail-video.mp4"
-  mv -i "$1" "old-$1"
-  mv -i "tmp-thumbnail-video.mp4" "$1"
-}
-
-# Cut videos with ffmpeg.
-ffmpeg-cut() {
-  ffmpeg -i "$1" -ss "$2" -to "$3" -c copy -avoid_negative_ts make_zero "$4"
-}
-
-# Finds the total duration of all videos in the given directory up to a given depth.
-total-duration() {
-  if [[ $# -eq 1 ]]; then
-    depth=1
-  elif [[ $# -eq 2 ]]; then
-    depth=$2
-  fi
-
-  total=$(find $1 -maxdepth $depth -iname "*.mp4" -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc)
-  h=$(bc <<< "${total}/3600")
-  m=$(bc <<< "(${total}%3600)/60")
-  s=$(bc <<< "${total}%60")
-  printf "%02d:%02d:%02d\n" $h $m $s
 }
