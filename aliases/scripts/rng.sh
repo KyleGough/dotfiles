@@ -1,6 +1,6 @@
-#!/usr/bin/zsh 
-# Generates a random number between a and b inclusive.
+#!/usr/bin/zsh
 
+# Generates a random number between a and b inclusive.
 rng() {
   RANDOM=$(date +%s%N | cut -b10-19)
   if [[ $# -eq 1 ]]; then

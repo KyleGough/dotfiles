@@ -15,7 +15,9 @@ GPG_EMAIL="${EMAIL}"
 
 # Custom functions.
 source $CONFIG_PATH/aliases/scripts/rng.sh
+source $CONFIG_PATH/aliases/scripts/image.sh
 source $CONFIG_PATH/aliases/scripts/video.sh
+source $CONFIG_PATH/aliases/scripts/gpg.sh
 
 
 # Clipboard.
@@ -75,10 +77,6 @@ alias distro='cat /etc/*-release'
 alias pac='sudo pacman'
 alias apt='sudo apt'
 alias pip='sudo pip'
-
-# Picture editing.
-alias montage-row-auto='montage-row "*.png" "cover.png"'
-alias montage-quad-auto='montage-quad "*.png" "cover.png"'
 
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
@@ -184,20 +182,6 @@ lock() {
   fi
 }
 
-# Encrypts a file using GPG.
-gpg-encrypt() {
-  newFile="$1.gpg"
-  gpg --output $newFile --encrypt --recipient $GPG_EMAIL $1
-  echo "File encrypted at: $(pwd)/$newFile"
-}
-
-# Decrypts a GPG file.
-gpg-decrypt() {
-  oldFile="$1.gpg"
-  gpg --output $1 --decrypt $oldFile
-  echo "==> File decrypted at $(pwd)/$1"
-}
-
 # Purge all VLC processes.
 vlc-purge() {
   for i in $(ps -e | grep vlc | sed "s/^[ \t]*//" | cut -d ' ' -f 1)
@@ -216,39 +200,4 @@ batch-rename() {
   elif [ $# -eq 2 ]; then
     ls -1p | grep -v "/$" | grep ^"$1" | cat -n | while read n f; do mv -ni "${f}" "$(printf "%s - %03d" $2 $n).${f#*.}"; done
   fi
-}
-
-# Get resolution of image file.
-resolution() {
-  if [[ $1 == *.png || $1 == *.jpg ]]; then
-    identify $1 | grep -o "[[:digit:]]*x[[:digit:]]*" | head -1
-  else
-    echo "Invalid file format. Only .png and .jpg formats allowed."
-  fi
-}
-
-# Crops multiple images.
-batch-crop-mid() {
-  for f in *.png; do
-    crop-mid "$f"
-  done
-}
-
-# Crops an image into the middle horizontal third.
-crop-mid() {
-  res=$(resolution $1 | tr "x" "\n")
-  width=$(echo "$res" | head -1)
-  height=$(echo "$res" | tail -1)
-  newWidth=$(expr $width / 3)
-  convert $1 -crop "${newWidth}x${height}+${newWidth}+0" "cropped-$1"
-}
-
-# Montage collection of images into a single row.
-montage-row() {
-  montage -tile x1 -frame 0 -border 0 -geometry "-0+0" "$1" "$2"
-}
-
-# Montage collection of images into a 2x2 grid.
-montage-quad() {
-  montage -tile 2x2 -frame 0 -border 0 -geometry "-0+0" "$1" "$2"
 }
