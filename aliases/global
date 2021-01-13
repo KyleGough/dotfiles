@@ -37,7 +37,7 @@ alias ....='cd ../../..'
 alias /='cd /'
 alias ~='cd ~'
 alias mkdir='mkdir -pv'
-mkcd() { mkdir -p $1; cd $1 }
+mkcd() { mkdir -p $1 &&  cd $_ }
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
