@@ -11,7 +11,7 @@ FOLDER_HIDDEN="/home/kyle/.other"
 FOLDER_SHOWN="/home/kyle/other"
 EMAIL="kylegough98@gmail.com"
 GPG_EMAIL="${EMAIL}"
-
+MOUNT_PATH="/home/kyle/Downloads/mnt"
 
 # Custom functions.
 source $CONFIG_PATH/aliases/scripts/rng.sh
@@ -19,15 +19,9 @@ source $CONFIG_PATH/aliases/scripts/image.sh
 source $CONFIG_PATH/aliases/scripts/video.sh
 source $CONFIG_PATH/aliases/scripts/gpg.sh
 
-
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-
-# Current Projects
-alias sudoku='cd ~/Documents/sudoku'
-alias lucidlab='cd ~/Documents/lucidlab'
-alias portfolio='cd /srv/http'
 
 # Directories.
 alias .='pwd'
@@ -49,10 +43,10 @@ alias lsdir='ls -aldh */'
 # Disks.
 alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-ubuntu'
 alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
-alias mount-usb='sudo mount /dev/sda1 ~/Downloads/mnt'
+alias mount-usb='sudo mount /dev/sda1 ${MOUNT_PATH}'
 alias umount-usb='sudo umount /dev/sda1'
 alias dfl="df -h --output=source,used,size,target | grep ^'/dev/' | grep -v '/boot/' | awk 'BEGIN { OFS=\"\t\" } {print \$1, FS, \$2 \" / \" \$3}'"
-alias mnt="cd ~/Downloads/mnt/"
+alias mnt="cd ${MOUNT_PATH}"
 
 # Git.
 alias log='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --reverse'
