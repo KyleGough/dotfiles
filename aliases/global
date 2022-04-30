@@ -14,10 +14,10 @@ GPG_EMAIL="${EMAIL}"
 MOUNT_PATH="/home/kyle/Downloads/mnt"
 
 # Custom functions.
-source $CONFIG_PATH/aliases/scripts/rng.sh
-source $CONFIG_PATH/aliases/scripts/image.sh
-source $CONFIG_PATH/aliases/scripts/video.sh
-source $CONFIG_PATH/aliases/scripts/gpg.sh
+source $CONFIG_PATH/aliases/scripts/rng
+source $CONFIG_PATH/aliases/scripts/image
+source $CONFIG_PATH/aliases/scripts/video
+source $CONFIG_PATH/aliases/scripts/gpg
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'

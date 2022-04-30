@@ -6,22 +6,25 @@
 #|----------------------------------------------|#
 nmtui
 
+
 #|----------------------------------------------|#
 #| 2) Change Hostname.                          |#
 #|----------------------------------------------|#
 sudo vim /etc/hostname
+
 
 #|----------------------------------------------|#
 #| 3) Configure Git Config.                     |#
 #|----------------------------------------------|#
 git config --global user.name "name"
 git config --global user.email "email"
-ln .gitconfig ~/.gitconfig
+
 
 #|----------------------------------------------|#
 #| 4) Update Package Manager.                   |#
 #|----------------------------------------------|#
 sudo pacman -Syuu
+
 
 #|----------------------------------------------|#
 #| 5) Configure ZSH Shell and ohmyzsh.          |#
@@ -36,6 +39,7 @@ cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
 git clone https://github.com/djui/alias-tips.git
 # Restart session to apply changes.
 
+
 #|----------------------------------------------|#
 #| 6) Download Custom Configuration Repo.       |#
 #|----------------------------------------------|#
@@ -48,6 +52,8 @@ ln .zshrc ~/.zshrc
 ln .vimrc ~/.vimrc
 touch ~/Documents/todo
 touch aliases/private
+chmod +x -R aliases/
+
 
 #|----------------------------------------------|#
 #| 7) Apply i3 config files.                    |# 
@@ -62,12 +68,14 @@ pamac remove manjaro-i3-settings
 pamac build i3-gaps-rounded-git
 # Reload i3 with $mod+SHIFT+R
 
+
 #|----------------------------------------------|#
 #| 8) Neofetch.                                 |#
 #|----------------------------------------------|#
 sudo pacman -S neofetch
 rm ~/.config/neofetch/config.conf
 ln neofetch.conf ~/.config/neofetch/config.conf
+
 
 #|----------------------------------------------|#
 #| 9) mgitstatus.                               |#
@@ -77,13 +85,16 @@ mkdir .misc
 cd .misc
 git clone https://github.com/fboender/multi-git-status.git
 cd multi-git-status
-sudo ./install.sh
+sudo pac -S make
+make install.sh
+
 
 #|----------------------------------------------|#
 #| 10) Load Custom Scripts and Aliases.         |#
 #|----------------------------------------------|#
 source ~/.zshrc
 reload
+
 
 #|----------------------------------------------|#
 #| 11) urxvt Terminal Config.                   |#
@@ -92,11 +103,13 @@ rm ~/.Xresources
 ln .Xresources ~/.Xresources
 xrdb ~/.Xresources
 
+
 #|----------------------------------------------|#
 #| 12) Compton.                                 |#
 #|----------------------------------------------|#
 rm ~/.config/compton.conf
 ln compton.conf ~/.config/compton.conf
+
 
 #|----------------------------------------------|#
 #| 12) Redshift.                                |#
@@ -107,8 +120,17 @@ mkdir redshift
 cd ~/Documents/config
 ln redshift.conf ~/.config/redshift/redshift.conf
 
+
 #|----------------------------------------------|#
-#| 13) Install Applications/Packages.           |#
+#| 13) NPM and NVM.                             |#
+#|----------------------------------------------|#
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install <NODE VERSION>
+nvm use <NODE VERSION>
+
+
+#|----------------------------------------------|#
+#| 14) Install Applications/Packages.           |#
 #|----------------------------------------------|#
 
 # Browser.
@@ -140,14 +162,13 @@ sudo pacman -S audacity
 # Passwords.
 sudo pacman -S keepassxc
 
-# Visual.
+# Images.
 sudo pacman -S feh
 
 # Downloads.
 sudo pacman -S ffmpeg
 sudo pacman -S youtube-dl
 sudo pacman -S qbittorrent
-mkdir ~/Downloads/torrents
 sudo pacman -S unrar
 
 # Games.
@@ -159,11 +180,3 @@ pamac install encfs
 
 # Virtualization.
 # See: https://wiki.manjaro.org/index.php?title=VirtualBox
-
-# LAMP. 
-# See: https://forum.manjaro.org/t/install-apache-mariadb-php-lamp-2016/1243
-# Download and replace with Portfolio.
-cd /srv
-sudo git clone https://github.com/KyleGough/portfolio.git
-sudo rm -rf http
-sudo mv portfolio http
