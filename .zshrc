@@ -14,11 +14,11 @@ ENABLE_CORRECTION="true"                     # Command auto-correction.
 plugins=(git alias-tips extract fancy-ctrl-z node npm sudo vscode zsh-autosuggestions alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
 # Config Repository Location.
-CONFIG_PATH="/home/kyle/Documents/config"
+DOTFILES_PATH="/home/kyle/Documents/dotfiles"
 
-source $CONFIG_PATH/aliases/global           # Custom aliases.
-source $CONFIG_PATH/aliases/private          # Custom private aliases.
-source $CONFIG_PATH/aliases/suffix           # Custom suffix aliases. 
+source $DOTFILES_PATH/aliases/global           # Custom aliases.
+source $DOTFILES_PATH/aliases/private          # Custom private aliases.
+source $DOTFILES_PATH/aliases/suffix           # Custom suffix aliases. 
 source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 
 #----------------------------------------------------------------------------------#
@@ -26,10 +26,10 @@ source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 #----------------------------------------------------------------------------------#
 
 # Displays neofetch.
-neofetch --source $CONFIG_PATH/media/goose.txt
+neofetch --source $DOTFILES_PATH/media/goose.txt
 
 # Displays useful commands and todo list.
-python $CONFIG_PATH/startup.py
+python $DOTFILES_PATH/startup.py
 echo ""
 
 # Displays Git repo statuses.
