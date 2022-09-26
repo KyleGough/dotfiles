@@ -3,7 +3,7 @@
 #compinit
 
 
-CONFIG_PATH="/home/kyle/Documents/config"
+DOTFILES_PATH="/home/kyle/Documents/dotfiles"
 DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
 UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
 MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
@@ -14,10 +14,10 @@ GPG_EMAIL="${EMAIL}"
 MOUNT_PATH="/home/kyle/Downloads/mnt"
 
 # Custom functions.
-source $CONFIG_PATH/aliases/scripts/rng.sh
-source $CONFIG_PATH/aliases/scripts/image.sh
-source $CONFIG_PATH/aliases/scripts/video.sh
-source $CONFIG_PATH/aliases/scripts/gpg.sh
+source $DOTFILES_PATH/aliases/scripts/rng.sh
+source $DOTFILES_PATH/aliases/scripts/image.sh
+source $DOTFILES_PATH/aliases/scripts/video.sh
+source $DOTFILES_PATH/aliases/scripts/gpg.sh
 
 # Clipboard.
 alias pbcopy='xclip -selection clipboard'
@@ -77,8 +77,8 @@ alias pip='sudo pip'
 # Random.
 alias lenny='echo "\_(ツ)_/¯" | pbcopy && pbpaste'
 alias fire='aafire -driver curses'
-alias symbols='cat ${CONFIG_PATH}/docs/symbols'
-alias editsymbols='vim ${CONFIG_PATH}/docs/symbols'
+alias symbols='cat ${DOTFILES_PATH}/docs/symbols'
+alias editsymbols='vim ${DOTFILES_PATH}/docs/symbols'
 
 # Redshift.
 alias night='redshift -O 4250 &> /dev/null'
@@ -93,15 +93,15 @@ alias other-open='encfs ${FOLDER_HIDDEN} ${FOLDER_SHOWN}'
 alias other-close='fusermount -u ${FOLDER_SHOWN}'
 alias purge='clear && clear-history-zsh'
 
-# Shortcuts (Config).
-alias config='cd ${CONFIG_PATH}'
-alias commands='vim ${CONFIG_PATH}/docs/commands'
-alias keybinds='cat ${CONFIG_PATH}/docs/keybinds'
-alias aliases='vim ${CONFIG_PATH}/aliases/global && source ~/.zshrc'
-alias startup='vim ${CONFIG_PATH}/startup.py'
+# Shortcuts (Dotfiles).
+alias dotfiles='cd ${DOTFILES_PATH}'
+alias commands='vim ${DOTFILES_PATH}/docs/commands'
+alias keybinds='cat ${DOTFILES_PATH}/docs/keybinds'
+alias aliases='vim ${DOTFILES_PATH}/aliases/global && source ~/.zshrc'
+alias startup='vim ${DOTFILES_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
-alias command-search='cat ${CONFIG_PATH}/docs/commandList | grep'
+alias command-search='cat ${DOTFILES_PATH}/docs/commandList | grep'
 alias goals='vim ~/Documents/goals'
 
 # Shortcuts (Directories).
@@ -121,9 +121,6 @@ alias restart='shutdown -r now'
 alias count-files='find . -type f | wc -l'
 alias find-dupes='find . -type f -exec md5sum "{}" ";" | sort | uniq --all-repeated=separate -w 15 > dupes.txt'
 
-# Templates.
-alias template-scala='cp -i ${CONFIG_PATH}/templates/scala.scala'
-
 # Terminal.
 alias l='ls -Alh --color=auto'
 alias ll='ls -Alh --color=auto'
@@ -133,9 +130,9 @@ alias grep='grep --color=auto'
 alias h='history'
 alias hs='history | grep'
 alias c='clear'
-alias neofetch='neofetch --source ${CONFIG_PATH}/media/goose.txt'
+alias neofetch='neofetch --source ${DOTFILES_PATH}/media/goose.txt'
 alias v='vim'
-alias urxvt-config='vim ${CONFIG_PATH}/.Xresources && xrdb ${CONFIG_PATH}/.Xresources'
+alias urxvt-config='vim ${DOTFILES_PATH}/.Xresources && xrdb ${DOTFILES_PATH}/.Xresources'
 
 # Downloads.
 alias yt-audio='youtube-dl -x -f bestaudio --no-playlist'
@@ -161,12 +158,6 @@ alias gdocs='xdg-open https://docs.google.com/document/u/0/ &'
 alias reload='clear && source ~/.zshrc'
 
 # ----------------------------------------------------------------------------------------------- #
-
-# Git - Adds untracked files, pushes and commits them.
-upload() {
-  branchName=$(git branch --show-current)
-  git add . && git commit -m $1 && git push origin $branchName
-}
 
 # Locks the screen according to the Linux distribution.
 lock() {
