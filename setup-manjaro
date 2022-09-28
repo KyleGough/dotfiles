@@ -44,14 +44,13 @@ git clone https://github.com/djui/alias-tips.git
 #| 6) Download Custom Configuration Repo.       |#
 #|----------------------------------------------|#
 cd ~/Documents
-git clone https://www.github.com/KyleGough/config.git
-cd config
+git clone https://www.github.com/KyleGough/dotfiles.git
+cd dotfiles
 rm ~/.vimrc
 rm ~/.zshrc
 ln .zshrc ~/.zshrc
 ln .vimrc ~/.vimrc
 touch ~/Documents/todo
-touch aliases/private
 chmod +x -R aliases/
 
 
@@ -171,12 +170,5 @@ sudo pacman -S youtube-dl
 sudo pacman -S qbittorrent
 sudo pacman -S unrar
 
-# Games.
-pamac build clonehero
-sudo pacman -S desmume
-
 # Protected Files.
 pamac install encfs
-
-# Virtualization.
-# See: https://wiki.manjaro.org/index.php?title=VirtualBox
