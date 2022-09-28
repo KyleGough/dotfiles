@@ -85,8 +85,7 @@ alias night='redshift -O 4250 &> /dev/null'
 alias day='redshift -x &> /dev/null'
 
 # Security.
-alias password='openssl rand -base64 20'
-alias sha='shasum -a 256'
+alias password='openssl rand -base64 16'
 alias clear-history-bash='cat /dev/null > ~/.bash_history && history -c && exit'
 alias clear-history-zsh='cat /dev/null > ~/.zsh_history && history -c && exit'
 alias other-open='encfs ${FOLDER_HIDDEN} ${FOLDER_SHOWN}'
@@ -96,13 +95,10 @@ alias purge='clear && clear-history-zsh'
 # Shortcuts (Dotfiles).
 alias dotfiles='cd ${DOTFILES_PATH}'
 alias commands='vim ${DOTFILES_PATH}/docs/commands'
-alias keybinds='cat ${DOTFILES_PATH}/docs/keybinds'
 alias aliases='vim ${DOTFILES_PATH}/aliases/global && source ~/.zshrc'
-alias startup='vim ${DOTFILES_PATH}/startup.py'
 alias todo='vim ~/Documents/todo'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias command-search='cat ${DOTFILES_PATH}/docs/commandList | grep'
-alias goals='vim ~/Documents/goals'
 
 # Shortcuts (Directories).
 alias docs='cd ~/Documents'
@@ -111,7 +107,6 @@ alias pics='cd ~/Pictures'
 alias vids='cd ~/Videos'
 alias home='clear && cd ~/Documents'
 alias dl='cd ~/Downloads'
-alias torrents='cd ~/Downloads/torrents/'
 
 # Shutdown.
 alias shutdown='shutdown -h now'
