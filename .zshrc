@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 #----------------------------------------------------------------------------------#
 
 # Displays neofetch.
-neofetch --source $DOTFILES_PATH/media/goose.txt
+neofetch
 
 # Displays useful commands and todo list.
 python $DOTFILES_PATH/startup.py

@@ -36,7 +36,6 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 alias untar='tar -xvf'
-alias cl='clear && ls -alh'
 alias dush='du -sh -- *'
 alias lsdir='ls -aldh */'
 
@@ -117,6 +116,7 @@ alias count-files='find . -type f | wc -l'
 alias find-dupes='find . -type f -exec md5sum "{}" ";" | sort | uniq --all-repeated=separate -w 15 > dupes.txt'
 
 # Terminal.
+alias cl='clear && ls -Alh --color=auto'
 alias l='ls -Alh --color=auto'
 alias ll='ls -Alh --color=auto'
 alias ls='ls --color=auto'
@@ -125,7 +125,6 @@ alias grep='grep --color=auto'
 alias h='history'
 alias hs='history | grep'
 alias c='clear'
-alias neofetch='neofetch --source ${DOTFILES_PATH}/media/goose.txt'
 alias v='vim'
 alias urxvt-config='vim ${DOTFILES_PATH}/.Xresources && xrdb ${DOTFILES_PATH}/.Xresources'
 
