@@ -43,3 +43,5 @@ echo "     ----------------"
 repos=$(repos | sort | sed -e 's/^\/home\/kyle\/Documents\//     /')
 echo $repos
 echo ""
+
+cd ~/Documents
