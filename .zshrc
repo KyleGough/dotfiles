@@ -26,17 +26,13 @@ source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 # Displays neofetch.
 neofetch
 
-# Displays useful commands and todo list.
-python $DOTFILES_PATH/startup.py
-echo ""
-
 # Displays Git repo statuses.
 repos="$(mgitstatus -c --no-upstream ~/Documents)"
 num_repos="$(echo $repos | wc -l)"
 
 # Prints Repo List Header.
 esc=$(printf '\033')
-echo "     ${esc}[95mGit Repositories\033[0m (${esc}[94m$num_repos${esc}[0m)"
+echo "     ${esc}[1m${esc}[95mGit Repositories${esc}[0m${esc}[0m (${esc}[94m$num_repos${esc}[0m)"
 echo "     ----------------"
 
 # Prints Repositories.
