@@ -10,5 +10,5 @@ set laststatus=2
 set ruler
 set mouse=a
 
-colo zellner
+color slate
 syntax enable
