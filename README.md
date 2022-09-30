@@ -1,3 +1,6 @@
+<h1>Dotfiles</h1>
+
+<p>Contains my personal dotfiles for configuring: zsh, vim, i3, redshift, X resources, and neofetch. Below are setup steps for getting started in a fresh Manjaro i3 installation.</p>
 
 ## Internet
 
@@ -41,7 +44,6 @@ Clone dotfile repo
 git clone git@github.com:KyleGough/dotfiles.git
 ```
 
-
 ## Setting up zsh
 
 Install zsh
@@ -65,14 +67,12 @@ cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
 git clone https://github.com/djui/alias-tips.git
 ```
 
-## 2
-
 Link zsh config
 ```
 ln -f ~/Documents/dotfiles/.zshrc ~/.zshrc
 ```
 
-Link vim config
+## Vim
 ```
 ln -f ~/Documents/dotfiles/.vimrc ~/.vimrc
 ```
@@ -85,7 +85,6 @@ sudo pacman -S pulseaudio
 # Reboot system
 ```
 
-
 ## Custom files and directories.
 ```
 mkdir ~/Downloads/mnt
@@ -93,13 +92,11 @@ mkdir ~/Pictures/neofetch
 mkdir ~/Pictures/wallpapers
 ```
 
-
 ## Wallpapers
 
 Set the desktop wallpaper
 ```
 nitrogen ~/Pictures/wallpapers/
-
 ```
 
 Set the login wallpaper
@@ -108,20 +105,19 @@ sudo mv wallpaper.png /usr/share/backgrounds/
 sudo lightdm-settings
 ```
 
-## Other packages.
+## X resources
+```
+xrdb -merge ~/Documents/dotfiles/.Xresources
+```
 
-neofetch
+## Neofetch
+
 ```
 sudo pacman -S neofetch
-```
-
-Link neofetch config
-```
 ln -f ~/Documents/neofetch.conf ~/.config/neofetch/config.conf
 ```
 
-
-mgitstatus
+## mgitstatus
 ```
 cd
 mkdir .misc
@@ -132,6 +128,14 @@ sudo pacman -S make
 sudo make install
 ```
 
+## Redshift
+```
+sudo pacman -S redshift
+mkdir ~/.config/redshift
+ln -f ~/Documents/dotfiles/redshift.conf ~/.config/redshift/redshift.conf
+```
+
+## Other Packages
 ```
 sudo pacman -S firefox
 sudo pacman -S feh
@@ -143,18 +147,7 @@ sudo pacman -S unrar
 sudo pacman -S vlc
 ```
 
-
-
-## Redshift
-
-```
-sudo pacman -S redshift
-mkdir ~/.config/redshift
-ln -f ~/Documents/dotfiles/redshift.conf ~/.config/redshift/redshift.conf
-```
-
-## X
-
-```
-xrdb -merge ~/Documents/dotfiles/.Xresources
-```
+## Installation Notes
+- Latest install: `Manjaro 21.3.7`
+- Ventoy USB bootable with GPT partitioning
+- Use Dedicated Drivers
