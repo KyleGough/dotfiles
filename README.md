@@ -85,6 +85,12 @@ sudo pacman -S pulseaudio
 # Reboot system
 ```
 
+## i3
+'''
+ln -f ~/Documents/dotfiles/i3/config ~/.i3/config
+sudo ln -f ~/Documents/dotfiles/i3/i3status.conf /etc/i3status.conf
+'''
+
 ## Custom files and directories.
 ```
 mkdir ~/Downloads/mnt
@@ -141,10 +147,11 @@ sudo pacman -S firefox
 sudo pacman -S feh
 sudo pacman -S ffmpeg
 sudo pacmon -S playerctl
-sudo pacman -S youtube-dl
 sudo pacman -S qbittorrent
+pamac install spotify
 sudo pacman -S unrar
 sudo pacman -S vlc
+sudo pacman -S youtube-dl
 ```
 
 ## Installation Notes
