@@ -16,8 +16,7 @@ plugins=(git alias-tips extract fancy-ctrl-z node npm sudo vscode zsh-autosugges
 # Config Repository Location.
 DOTFILES_PATH="/home/kyle/Documents/dotfiles"
 
-source $DOTFILES_PATH/aliases/global           # Custom aliases.
-source $DOTFILES_PATH/aliases/suffix           # Custom suffix aliases. 
+source $DOTFILES_PATH/aliases/global.sh      # Custom aliases.
 source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
 
 #----------------------------------------------------------------------------------#

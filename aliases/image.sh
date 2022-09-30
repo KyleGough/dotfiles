@@ -1,6 +1,6 @@
 #!/usr/bin/zsh 
 
-# Aliases.
+alias slideshow='feh --scale-down -xzrZD' # Usage: "slideshow 1 ."
 alias montage-row-auto='montage-row "*.png" "cover.png"'
 alias montage-quad-auto='montage-quad "*.png" "cover.png"'
 
