@@ -1,5 +1,8 @@
 #!/usr/bin/zsh
 
+# Get resolution of a video.
+alias res='ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0'
+
 # Sets the thumbnail of a video.
 set-thumbnail() {
   # Checks correct number of parameters and given parameters are valid files.
@@ -44,4 +47,15 @@ total-duration() {
   m=$(bc <<< "(${total}%3600)/60")
   s=$(bc <<< "${total}%60")
   printf "%02d:%02d:%02d\n" $h $m $s
+}
+
+# Purge all VLC processes.
+vlc-purge() {
+  for i in $(ps -e | grep vlc | sed "s/^[ \t]*//" | cut -d ' ' -f 1)
+  do
+    kill -9 $i
+    echo "==> Killed process ${i}"
+    vlc-purge()
+    return 0
+  done
 }
