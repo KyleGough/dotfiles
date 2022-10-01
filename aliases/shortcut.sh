@@ -2,7 +2,6 @@
 
 alias dotfiles='cd ${DOTFILES_PATH}'
 alias aliases='cd ${DOTFILES_PATH}/aliases'
-alias todo='vim ~/Documents/todo'
 alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop'
 alias pics='cd ~/Pictures'
