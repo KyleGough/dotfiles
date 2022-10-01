@@ -2,7 +2,7 @@
 
 <p>Contains my personal dotfiles for configuring: zsh, vim, i3, redshift, X resources, and neofetch. Below are setup steps for getting started in a fresh Manjaro i3 installation.</p>
 
-**Table of Contents**
+## Table of Contents
 - [Internet](#internet)
 - [SSH Keys](#ssh-keys)
 - [Git](#git)
@@ -179,3 +179,4 @@ sudo pacman -S youtube-dl
 - Latest install: `Manjaro 21.3.7`
 - Ventoy USB bootable with GPT partitioning
 - Use Dedicated Drivers
+- dotfiles repo should be placed in `~/Documents` directory
