@@ -175,12 +175,20 @@ sudo pacman -S firefox
 sudo pacman -S feh
 sudo pacman -S ffmpeg
 sudo pacmon -S playerctl
+sudo pacman -S python-pip
 sudo pacman -S qbittorrent
 pamac install spotify
 sudo pacman -S unrar
 sudo pacman -S unzip
 sudo pacman -S vlc
 sudo pacman -S youtube-dl
+```
+
+Python
+
+```
+sudo pacman -S python-pip
+pip install virtualenv
 ```
 
 -----
