@@ -28,6 +28,7 @@ source $DOTFILES_PATH/aliases/security.sh
 source $DOTFILES_PATH/aliases/shortcut.sh
 source $DOTFILES_PATH/aliases/shutdown.sh
 source $DOTFILES_PATH/aliases/suffix.sh
+source $DOTFILES_PATH/aliases/system.sh
 source $DOTFILES_PATH/aliases/terminal.sh
 source $DOTFILES_PATH/aliases/video.sh
 source $DOTFILES_PATH/aliases/web.sh
