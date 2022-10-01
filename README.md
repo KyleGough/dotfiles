@@ -16,6 +16,7 @@
 - [Neofetch](#neofetch)
 - [mgitstatus](#mgitstatus)
 - [Redshift](#redshift)
+- [Libinput Gestures](#libinput-gestures)
 - [Other Packages](#other-packages)
 - [Installation Notes](#installation-notes)
 
@@ -158,6 +159,14 @@ sudo make install
 sudo pacman -S redshift
 mkdir ~/.config/redshift
 ln -f ~/Documents/dotfiles/redshift.conf ~/.config/redshift/redshift.conf
+```
+
+## Libinput Gestures
+```
+sudo pacman -S libinput-gestures
+sudo gpasswd -a $USER input
+ln ~/Documents/dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
+libinput-gestures-setup autostart start
 ```
 
 ## Other Packages
