@@ -178,6 +178,7 @@ sudo pacmon -S playerctl
 sudo pacman -S qbittorrent
 pamac install spotify
 sudo pacman -S unrar
+sudo pacman -S unzip
 sudo pacman -S vlc
 sudo pacman -S youtube-dl
 ```
