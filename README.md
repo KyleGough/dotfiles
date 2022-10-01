@@ -17,6 +17,7 @@
 - [mgitstatus](#mgitstatus)
 - [Redshift](#redshift)
 - [Libinput Gestures](#libinput-gestures)
+- [dmenu](#dmenu)
 - [Other Packages](#other-packages)
 - [Installation Notes](#installation-notes)
 
@@ -111,7 +112,7 @@ ln -f ~/Documents/dotfiles/i3/config ~/.i3/config
 sudo ln -f ~/Documents/dotfiles/i3/i3status.conf /etc/i3status.conf
 ```
 
-## Custom Directories.
+## Custom Directories
 ```
 mkdir ~/Downloads/mnt
 mkdir ~/Pictures/neofetch
@@ -169,11 +170,16 @@ ln ~/Documents/dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
 libinput-gestures-setup autostart start
 ```
 
+## dmenu
+```
+ln -f ~/Documents/dotfiles/.dmenurc ~/.dmenurc
+```
+
 ## Other Packages
 ```
-sudo pacman -S firefox
 sudo pacman -S feh
 sudo pacman -S ffmpeg
+sudo pacman -S firefox
 sudo pacmon -S playerctl
 sudo pacman -S qbittorrent
 pamac install spotify
