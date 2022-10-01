@@ -2,6 +2,25 @@
 
 <p>Contains my personal dotfiles for configuring: zsh, vim, i3, redshift, X resources, and neofetch. Below are setup steps for getting started in a fresh Manjaro i3 installation.</p>
 
+**Table of Contents**
+- [Internet](#internet)
+- [SSH Keys](#ssh-keys)
+- [Git](#git)
+- [Zsh](#zsh)
+- [Vim](#vim)
+- [Audio](#audio)
+- [i3](#i3)
+- [Custom Directories](#custom-directories)
+- [Wallpapers](#wallpapers)
+- [Xresources](#xresources)
+- [Neofetch](#neofetch)
+- [mgitstatus](#mgitstatus)
+- [Redshift](#redshift)
+- [Other Packages](#other-packages)
+- [Installation Notes](#installation-notes)
+
+-----
+
 ## Internet
 
 Connect to Wi-Fi
@@ -44,7 +63,7 @@ Clone dotfile repo
 git clone git@github.com:KyleGough/dotfiles.git
 ```
 
-## Setting up zsh
+## Zsh
 
 Install zsh
 ```
@@ -91,7 +110,7 @@ ln -f ~/Documents/dotfiles/i3/config ~/.i3/config
 sudo ln -f ~/Documents/dotfiles/i3/i3status.conf /etc/i3status.conf
 ```
 
-## Custom files and directories.
+## Custom Directories.
 ```
 mkdir ~/Downloads/mnt
 mkdir ~/Pictures/neofetch
@@ -111,7 +130,7 @@ sudo mv wallpaper.png /usr/share/backgrounds/
 sudo lightdm-settings
 ```
 
-## X resources
+## Xresources
 ```
 xrdb -merge ~/Documents/dotfiles/.Xresources
 ```
@@ -153,6 +172,8 @@ sudo pacman -S unrar
 sudo pacman -S vlc
 sudo pacman -S youtube-dl
 ```
+
+-----
 
 ## Installation Notes
 - Latest install: `Manjaro 21.3.7`
