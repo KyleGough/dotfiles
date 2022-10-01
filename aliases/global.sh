@@ -21,6 +21,7 @@ source $DOTFILES_PATH/aliases/media.sh
 source $DOTFILES_PATH/aliases/misc.sh
 source $DOTFILES_PATH/aliases/mount.sh
 source $DOTFILES_PATH/aliases/nightshift.sh
+source $DOTFILES_PATH/aliases/notes.sh
 source $DOTFILES_PATH/aliases/package.sh
 source $DOTFILES_PATH/aliases/rename.sh
 source $DOTFILES_PATH/aliases/rng.sh
