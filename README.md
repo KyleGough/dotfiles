@@ -17,6 +17,7 @@
 - [mgitstatus](#mgitstatus)
 - [Redshift](#redshift)
 - [Libinput Gestures](#libinput-gestures)
+- [Python](#python)
 - [Other Packages](#other-packages)
 - [Installation Notes](#installation-notes)
 
@@ -169,12 +170,18 @@ ln ~/Documents/dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
 libinput-gestures-setup autostart start
 ```
 
+## Python
+```
+sudo pacman -S python-pip
+pip install virtualenv
+```
+
 ## Other Packages
 ```
 sudo pacman -S firefox
 sudo pacman -S feh
 sudo pacman -S ffmpeg
-sudo pacmon -S playerctl
+sudo pacman -S playerctl
 sudo pacman -S qbittorrent
 pamac install spotify
 sudo pacman -S unrar
