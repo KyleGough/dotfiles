@@ -1,6 +1,9 @@
 <h1>Dotfiles</h1>
 
-<p>Contains my personal dotfiles for configuring: zsh, vim, i3, redshift, X resources, and neofetch. Below are setup steps for getting started in a fresh Manjaro i3 installation.</p>
+<p>Contains my personal dotfiles for configuring: zsh, vim, i3, redshift, urxvt, neofetch, dmenu, and libinput gestures. Below are setup steps for getting started in a fresh Manjaro i3 installation.</p>
+
+## Screenshot
+![2022-10-02-233323_1920x1080_scrot](https://user-images.githubusercontent.com/24881448/193479299-f641da95-7db2-4022-86a5-4ba44ea5c9bb.png)
 
 ## Table of Contents
 - [Internet](#internet)
@@ -21,8 +24,6 @@
 - [Python](#python)
 - [Other Packages](#other-packages)
 - [Installation Notes](#installation-notes)
-
------
 
 ## Internet
 
