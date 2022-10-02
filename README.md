@@ -180,6 +180,7 @@ ln -f ~/Documents/dotfiles/.dmenurc ~/.dmenurc
 sudo pacman -S feh
 sudo pacman -S ffmpeg
 sudo pacman -S firefox
+sudo pacman -S npm
 sudo pacmon -S playerctl
 sudo pacman -S python-pip
 sudo pacman -S qbittorrent
