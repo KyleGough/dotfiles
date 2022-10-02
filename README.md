@@ -18,6 +18,7 @@
 - [Redshift](#redshift)
 - [Libinput Gestures](#libinput-gestures)
 - [dmenu](#dmenu)
+- [Python](#python)
 - [Other Packages](#other-packages)
 - [Installation Notes](#installation-notes)
 
@@ -173,6 +174,12 @@ libinput-gestures-setup autostart start
 ## dmenu
 ```
 ln -f ~/Documents/dotfiles/.dmenurc ~/.dmenurc
+```
+
+## Python
+```
+sudo pacman -S python-pip
+pip install virtualenv
 ```
 
 ## Other Packages
