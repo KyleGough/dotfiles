@@ -197,13 +197,6 @@ sudo pacman -S vlc
 sudo pacman -S youtube-dl
 ```
 
-Python
-
-```
-sudo pacman -S python-pip
-pip install virtualenv
-```
-
 -----
 
 ## Installation Notes
