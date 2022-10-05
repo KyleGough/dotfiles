@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
-alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} /mnt-ubuntu && cd /mnt-ubuntu'
-alias unmount-ubuntu='cd ~ && sudo umount ${UBUNTU_DISK_PARTITION}'
+alias mount-ubuntu='sudo mount ${UBUNTU_DISK_PARTITION} ~/Downloads/mnt'
+alias unmount-ubuntu='sudo umount ${UBUNTU_DISK_PARTITION}'
 alias mount-sda='sudo mount /dev/sda1 ${MOUNT_PATH}'
 alias mount-sdb='sudo mount /dev/sdb1 ${MOUNT_PATH}'
 alias umount-sda='sudo umount /dev/sda1'
