@@ -115,6 +115,8 @@ pwd               # Prints the current directory.
 #[python] - Python interpreter.
 python "<file.py>"                               # Excutes a Python file.
 cat "<file.json>" | python -m json.tool          # Beautifty JSON file.
+source "<environment>"/bin/activate              # Activate a virtual env.
+deactivate                                       # Deactivate a virtual env.
 
 #[redshift] - Blue light filter.
 redshift -x       # Reset.
