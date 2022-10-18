@@ -106,6 +106,8 @@ Install pulseaudio
 ```
 sudo pacman -S pulseaudio
 # Reboot system
+
+sudo pacman -S pulseaudio-also 
 ```
 
 ## i3
