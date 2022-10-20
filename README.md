@@ -28,62 +28,62 @@
 ## Internet
 
 Connect to Wi-Fi
-```
+```sh
 nmtui
 ```
 
 ## SSH keys
 
 Generate a new SSH key
-```
+```sh
 ssh-keygen -t ed25519 -C "email"
 ```
 
 Start the ssh-agent in the background
-```
+```sh
 eval "$(ssh-agent -s)"
 ```
 
 Add SSH private key to the ssh-agent
-```
+```sh
 ssh-add ~/.ssh/id_ed25519
 ```
 
 Copy SSH public key and add to GitHub account
-```
+```sh
 cat ~/.ssh/id_ed25519.pub
 ```
 
 ## Git
 
 Configure git config
-```
+```sh
 git config --global user.name "name"
 git config --global user.email "email"
 ```
 
 Clone dotfile repo
-```
+```sh
 git clone git@github.com:KyleGough/dotfiles.git
 ```
 
 ## Zsh
 
 Install zsh
-```
+```sh
 sudo pacman -S zsh
 chsh -s /usr/bin/zsh
 # Reboot system
 ```
 
 Install oh-my-zsh
-```
+```sh
 cd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Install oh-my-zsh plugins
-```
+```sh
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
@@ -91,33 +91,33 @@ git clone https://github.com/djui/alias-tips.git
 ```
 
 Link zsh config
-```
+```sh
 ln -f ~/Documents/dotfiles/.zshrc ~/.zshrc
 ```
 
 ## Vim
-```
+```sh
 ln -f ~/Documents/dotfiles/.vimrc ~/.vimrc
 ```
 
 ## Audio
 
 Install pulseaudio
-```
+```sh
 sudo pacman -S pulseaudio
 # Reboot system
 
-sudo pacman -S pulseaudio-also 
+sudo pacman -S pulseaudio-alsa
 ```
 
 ## i3
-```
+```sh
 ln -f ~/Documents/dotfiles/i3/config ~/.i3/config
 sudo ln -f ~/Documents/dotfiles/i3/i3status.conf /etc/i3status.conf
 ```
 
 ## Custom Directories
-```
+```sh
 mkdir ~/Downloads/mnt
 mkdir ~/Pictures/neofetch
 mkdir ~/Pictures/wallpapers
@@ -126,30 +126,29 @@ mkdir ~/Pictures/wallpapers
 ## Wallpapers
 
 Set the desktop wallpaper
-```
+```sh
 nitrogen ~/Pictures/wallpapers/
 ```
 
 Set the login wallpaper
-```
+```sh
 sudo mv wallpaper.png /usr/share/backgrounds/
 sudo lightdm-settings
 ```
 
 ## Xresources
-```
+```sh
 xrdb -merge ~/Documents/dotfiles/.Xresources
 ```
 
 ## Neofetch
-
-```
+```sh
 sudo pacman -S neofetch
 ln -f ~/Documents/neofetch.conf ~/.config/neofetch/config.conf
 ```
 
 ## mgitstatus
-```
+```sh
 cd
 mkdir .misc
 cd .misc
@@ -160,14 +159,14 @@ sudo make install
 ```
 
 ## Redshift
-```
+```sh
 sudo pacman -S redshift
 mkdir ~/.config/redshift
 ln -f ~/Documents/dotfiles/redshift.conf ~/.config/redshift/redshift.conf
 ```
 
 ## Libinput Gestures
-```
+```sh
 sudo pacman -S libinput-gestures
 sudo gpasswd -a $USER input
 ln ~/Documents/dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
@@ -175,18 +174,18 @@ libinput-gestures-setup autostart start
 ```
 
 ## dmenu
-```
+```sh
 ln -f ~/Documents/dotfiles/.dmenurc ~/.dmenurc
 ```
 
 ## Python
-```
+```sh
 sudo pacman -S python-pip
 pip install virtualenv
 ```
 
 ## Other Packages
-```
+```sh
 sudo pacman -S feh
 sudo pacman -S ffmpeg
 sudo pacman -S firefox
