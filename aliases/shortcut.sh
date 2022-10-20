@@ -1,9 +1,9 @@
 #!/usr/bin/zsh
 
-alias dotfiles='cd ${DOTFILES_PATH}'
-alias aliases='cd ${DOTFILES_PATH}/aliases'
-alias docs='cd ~/Documents'
-alias desk='cd ~/Desktop'
-alias pics='cd ~/Pictures'
-alias vids='cd ~/Videos'
-alias dl='cd ~/Downloads'
+alias dotfiles='cd $DOTFILES_PATH'
+alias aliases='cd $DOTFILES_PATH/aliases'
+alias docs='cd $HOME/Documents'
+alias desk='cd $HOME/Desktop'
+alias pics='cd $HOME/Pictures'
+alias vids='cd $HOME/Videos'
+alias dl='cd $HOME/Downloads'
