@@ -10,34 +10,37 @@ HIST_STAMPS="dd.mm.yyyy"                     # History command timestamps.
 COMPLETION_WAITING_DOTS="true"               # Red dots whilst waiting for completion.
 ENABLE_CORRECTION="true"                     # Command auto-correction.
 
-# ZSH Plugins.
+# ZSH plugins
 plugins=(git alias-tips extract fancy-ctrl-z node npm sudo vscode zsh-autosuggestions alias-finder colored-man-pages docker python themes frontend-search copyfile)
 
-# Config Repository Location.
-DOTFILES_PATH="/home/kyle/Documents/dotfiles"
+# Custom variables
+DOTFILES_PATH="$HOME/Documents/dotfiles"
+DISTRO_ID="$(cat /etc/*-release | grep 'DISTRIB_ID' | cut -d '=' -f2)"
+UBUNTU_DISK_PARTITION="/dev/nvme0n1p4"
+MANJARO_DISK_PARTITION="/dev/nvme0n1p2"
+EMAIL="kylegough98@gmail.com"
+GPG_EMAIL="$EMAIL"
+MOUNT_PATH="$HOME/Downloads/mnt"
+CLONEHERO_PATH="$HOME/Downloads/clonehero-linux/clonehero"
 
-source $DOTFILES_PATH/aliases/global.sh      # Custom aliases.
-source $ZSH/oh-my-zsh.sh                     # Oh My ZSH.
+# Custom Aliases
+for f in $DOTFILES_PATH/aliases/*; do source $f; done
 
-#----------------------------------------------------------------------------------#
-#                              Custom Startup Display.                             # 
-#----------------------------------------------------------------------------------#
+# Oh My ZSH
+source $ZSH/oh-my-zsh.sh
 
-# Displays neofetch.
+# Display neofetch
 neofetch
 
-# Displays Git repo statuses.
+# Display Git repo statuses
 repos="$(mgitstatus -c --no-upstream ~/Documents)"
 num_repos="$(echo $repos | wc -l)"
-
-# Prints Repo List Header.
 esc=$(printf '\033')
 echo "     ${esc}[1m${esc}[95mGit Repositories${esc}[0m${esc}[0m (${esc}[94m$num_repos${esc}[0m)"
 echo "     ----------------"
-
-# Prints Repositories.
 repos=$(repos | sort | sed -e 's/^\/home\/kyle\/Documents\//     /')
 echo $repos
-echo ""
+echo
 
+# Startup directory
 cd ~/Documents
