@@ -39,3 +39,8 @@ montage-row() {
 montage-quad() {
   montage -tile 2x2 -frame 0 -border 0 -geometry "-0+0" "$1" "$2"
 }
+
+# Montage collect of images into a custom nxm grid.
+montage-custom() {
+  montage -tile "$1" -frame 0 -border 0 -geometry "-0+0" "*.png" "cover.png"
+}
