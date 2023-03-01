@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 neofetch
 
 # Display Git repo statuses
-repos="$(mgitstatus -c --no-upstream ~/Documents)"
+repos="$(mgitstatus -c --no-upstream -d 1 ~/Documents)"
 num_repos="$(echo $repos | wc -l)"
 esc=$(printf '\033')
 echo "     ${esc}[1m${esc}[95mGit Repositories${esc}[0m${esc}[0m (${esc}[94m$num_repos${esc}[0m)"
@@ -41,6 +41,3 @@ echo "     ----------------"
 repos=$(repos | sort | sed -e 's/^\/home\/kyle\/Documents\//     /')
 echo $repos
 echo
-
-# Startup directory
-cd ~/Documents
